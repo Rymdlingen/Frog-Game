@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour
     public float minPitch;
     public float maxPitch;
 
-    public GameObject frog;
+    public GameObject playerCharacter;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,7 @@ public class CameraController : MonoBehaviour
         // Rotate the camera pivot around both y and x and rotate player around the y axis.
         if (mouseXMovement != 0 || mouseYMovement != 0)
         {
-            frog.transform.rotation = Quaternion.Euler(0, yRotation, 0);
+            playerCharacter.transform.rotation = Quaternion.Euler(0, yRotation, 0);
             transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         }
     }
