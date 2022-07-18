@@ -271,6 +271,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47caf872c971d194c9d6e997ed52002d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedWalk: 5
+  speedRun: 8
+  jumpSpeed: 10
+  jumpHeight: 2
+  gravityJumpStart: 9.81
+  gravityJumpRealeas: 20
+  gravityJumpFall: 40
+  playerRb: {fileID: 484124731}
 --- !u!136 &484124730
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -341,6 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 707617807}
   - component: {fileID: 707617808}
+  - component: {fileID: 707617809}
   m_Layer: 0
   m_Name: Camera Pivot
   m_TagString: Untagged
@@ -378,6 +387,23 @@ MonoBehaviour:
   cameraHorizontalSpeed: 10
   cameraVerticalSpeed: 15
   minPitch: -20
+  maxPitch: 50
+  playerCharacter: {fileID: 484124727}
+--- !u!114 &707617809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707617806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65462dfd758148d5b0e24af3b53a77b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraHorizontalSpeed: 3
+  cameraVerticalSpeed: 3
+  minPitch: -10
   maxPitch: 50
   playerCharacter: {fileID: 484124727}
 --- !u!1 &757823316
