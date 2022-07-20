@@ -271,14 +271,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47caf872c971d194c9d6e997ed52002d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedWalk: 5
+  speedWalk: 50
   speedRun: 8
   jumpSpeed: 10
   jumpHeight: 2
   gravityJumpStart: 9.81
   gravityJumpRealeas: 20
   gravityJumpFall: 40
-  playerRb: {fileID: 484124731}
 --- !u!136 &484124730
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -289,10 +288,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.41816807
-  m_Height: 0.9834895
+  m_Radius: 0.4
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 0.1369052, z: 0.121364355}
+  m_Center: {x: 0, y: 0.1, z: 0.1}
 --- !u!54 &484124731
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -302,12 +301,12 @@ Rigidbody:
   m_GameObject: {fileID: 484124727}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 6
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &626383853
 GameObject:

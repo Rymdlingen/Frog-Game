@@ -17,13 +17,13 @@ public class PhysicsCharacterController : MonoBehaviour
 
     private bool isJumping;
     private bool isGrounded;
-
-    [SerializeField] private Rigidbody playerRb;
+    private Rigidbody playerRb;
+    private Vector3 direction;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        playerRb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -43,38 +43,71 @@ public class PhysicsCharacterController : MonoBehaviour
             currentSpeed = speedWalk;
         }
 
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
 
-        Vector3 direction = horizontalInput * transform.right + verticalInput * transform.forward;
+        direction = horizontalInput * transform.right + verticalInput * transform.forward;
+        direction.Normalize();
 
-        // transform.position += direction * Time.deltaTime * currentSpeed;
-
-        playerRb.AddForce(direction, ForceMode.Impulse);
+        /* if (verticalInput == 0)
+         {
+             playerRb.velocity = new Vector3(playerRb.velocity.x, playerRb.velocity.y, 0);
+         }*/
 
         // Jump
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravityJumpStart);
             currentGravity = gravityJumpStart;
+
+            playerRb.AddForce(transform.up * currentGravity, ForceMode.Impulse);
+
+
             isJumping = true;
             isGrounded = false;
-            Debug.Log("Jump!");
+            Debug.Log("Start jump!");
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) /*&& velocity.y > 0*/ && isJumping)
+        if (Input.GetKeyUp(KeyCode.Space) /*&& velocity.y > 0*/ && playerRb.velocity.y > 0 && isJumping)
         {
             currentGravity = gravityJumpRealeas;
+            // playerRb.AddForce(transform.up * currentGravity, ForceMode.Impulse);
+
+            Debug.Log("Release jump!");
+
         }
 
-        if (/*velocity.y < 0 && */isJumping)
+        if (/*velocity.y < 0 && */ playerRb.velocity.y < 0 && isJumping)
         {
             currentGravity = gravityJumpFall;
+            // playerRb.AddForce(transform.up * -currentGravity, ForceMode.Impulse);
+
+            Debug.Log("Falling!");
+
         }
 
         // velocity.y += currentGravity * Time.deltaTime;
 
 
         // transform.position += velocity * Time.deltaTime;
+    }
+
+    private void FixedUpdate()
+    {
+        MovePlayer();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag == "Floor")
+        {
+            isGrounded = true;
+            isJumping = false;
+        }
+    }
+
+    private void MovePlayer()
+    {
+        playerRb.AddForce(direction * currentSpeed * Time.deltaTime, ForceMode.VelocityChange);
     }
 }
