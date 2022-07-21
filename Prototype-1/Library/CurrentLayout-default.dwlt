@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 442}
   m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 791
+  controlID: 76
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 442}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 796
+  controlID: 77
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 759
+  controlID: 17
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 797
+  controlID: 78
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -450,7 +450,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: b6480000
       m_LastClickedID: 18614
-      m_ExpandedIDs: 6efbffffb6480000
+      m_ExpandedIDs: 6cfbffff6efbffffb6480000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -510,9 +510,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 11.012085, y: -31604.371, z: 8.808843}
+    m_Target: {x: 7.8131833, y: -1.7903168, z: 10.371976}
     speed: 2
-    m_Value: {x: 11.012085, y: -31604.371, z: 8.808843}
+    m_Value: {x: 7.8131833, y: -1.7903168, z: 10.371976}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -559,13 +559,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.31265858, y: 0.28805885, z: -0.10011792, w: 0.8995802}
+    m_Target: {x: 0.124135494, y: 0.026190925, z: -0.0032778357, w: 0.9919151}
     speed: 2
-    m_Value: {x: 0.31265834, y: 0.28805864, z: -0.10011785, w: 0.8995795}
+    m_Value: {x: 0.124135375, y: 0.026190901, z: -0.0032778326, w: 0.99191415}
   m_Size:
-    m_Target: 4.795361
+    m_Target: 4.3595862
     speed: 2
-    m_Value: 4.795361
+    m_Value: 4.3595862
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -717,22 +717,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Materials/Physics Materials
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Materials/Physics Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Johanna\Game development\GitHub\Frog-Game\Prototype-1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 924a0000
-    m_LastClickedID: 19090
-    m_ExpandedIDs: 00000000784a00007a4a00007c4a0000
+    m_SelectedIDs: b84d0000
+    m_LastClickedID: 19896
+    m_ExpandedIDs: 00000000784a00007a4a00007c4a0000944a0000a04a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -785,9 +785,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 344f0000
-    m_LastClickedInstanceID: 20276
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: b6480000
+    m_LastClickedInstanceID: 18614
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -873,7 +873,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 125
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
