@@ -250,7 +250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484124727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.7, y: 3.2, z: 8.4}
+  m_LocalPosition: {x: 7.7, y: 0.86, z: 8.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 138493511}
@@ -280,7 +280,7 @@ MonoBehaviour:
   gravityJumpFall: 40
   currentVelocity: {x: 0, y: 0, z: 0}
   rideHeight: -0.5
-  rideSpringStrenght: 0.5
+  rideSpringStrenght: 1
   rideSpringDamper: 1
 --- !u!136 &484124730
 CapsuleCollider:
@@ -311,7 +311,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &626383853
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &928223232
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1080,7 +1080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 685062974113460188, guid: 86f8fdab2243d4d76a905d6ba4eac986, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.049
       objectReference: {fileID: 0}
     - target: {fileID: 685062974113460188, guid: 86f8fdab2243d4d76a905d6ba4eac986, type: 3}
       propertyPath: m_LocalPosition.z
