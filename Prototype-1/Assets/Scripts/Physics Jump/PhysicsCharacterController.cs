@@ -11,9 +11,9 @@ public class PhysicsCharacterController : MonoBehaviour
 
     [SerializeField] private float jumpHeight;
     [SerializeField] private float gravityJumpStart;
-    [SerializeField] private float gravityJumpRealeas;
+    [SerializeField] private float gravityJumpRelease;
     [SerializeField] private float gravityJumpFall;
-    private float currentGravity;
+    private float gravityModifier;
 
     private bool isJumping;
     private bool isGrounded;
@@ -33,7 +33,12 @@ public class PhysicsCharacterController : MonoBehaviour
     float theXfloat;
     float lastDistance;
 
+    float wantedYVelocity;
+
     RaycastHit hit;
+
+    // Testing the jump from the article.
+    public float gravityScale = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +48,7 @@ public class PhysicsCharacterController : MonoBehaviour
         heightOfPlayerModel = transform.Find("Frog").GetComponent<BoxCollider>().size.y;
         goalYPositionOffset = (heightOfPlayerModel - transform.GetComponent<CapsuleCollider>().height) / 2;
         rideHeight = heightOfPlayerModel / 2;
-        currentGravity = gravityJumpStart;
+        gravityModifier = gravityJumpStart;
     }
 
     // Update is called once per frame
@@ -77,57 +82,55 @@ public class PhysicsCharacterController : MonoBehaviour
 
         }
 
-
-
-
-
-
-
-
-
-
-
         #region Move player
 
         // Move player on ground plane.
+        // Pick the correct speed.
         if (isJumping)
         {
+            // Horizontal speed for drifting in directions while jumping.
             currentSpeed = jumpSpeed;
         }
         else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            currentSpeed = speedRun;
+            if (currentSpeed != speedRun)
+            {
+                currentSpeed = speedRun;
+            }
         }
         else
         {
             currentSpeed = speedWalk;
         }
 
+        // Get movement input from player.
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
 
+        // Make input into a direction based on the rotation of the player.
         direction = horizontalInput * transform.right + verticalInput * transform.forward;
         direction.Normalize();
 
         #endregion Move Player
 
         // Jump
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
-            // velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravityJumpStart);
-            currentGravity = gravityJumpStart;
+            gravityModifier = gravityJumpStart;
+            wantedYVelocity = Mathf.Sqrt(-2 * Physics.gravity.y + gravityModifier * jumpHeight);
 
-            playerRb.AddForce(transform.up * currentGravity, ForceMode.Impulse);
+            playerRb.AddForce(transform.up * gravityModifier, ForceMode.Impulse);
+            playerRb.AddForce(Physics.gravity * (gravityScale - 1) * playerRb.mass);
 
             isJumping = true;
             isGrounded = false;
             // Debug.Log("Start jump!");
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) /*&& velocity.y > 0*/ && playerRb.velocity.y > 0 && isJumping)
+        if (Input.GetKeyUp(KeyCode.Space) && playerRb.velocity.y > 0 && isJumping)
         {
-            currentGravity = gravityJumpRealeas;
-            // playerRb.AddForce(transform.up * currentGravity, ForceMode.Impulse);
+            gravityModifier = gravityJumpRelease;
+            wantedYVelocity = Mathf.Sqrt(-2 * gravityModifier * jumpHeight);
 
             // Debug.Log("Release jump!");
 
@@ -135,7 +138,7 @@ public class PhysicsCharacterController : MonoBehaviour
 
         if (/*velocity.y < 0 && */ playerRb.velocity.y < 0 && isJumping)
         {
-            currentGravity = gravityJumpFall;
+            gravityModifier = gravityJumpFall;
             // playerRb.AddForce(transform.up * -currentGravity, ForceMode.Impulse);
 
             // Debug.Log("Falling!");
@@ -151,15 +154,13 @@ public class PhysicsCharacterController : MonoBehaviour
     private void FixedUpdate()
     {
 
-        float deltaTime = Time.deltaTime;
-
         Physics.Raycast(playerRb.position + playerCollider.center, Vector3.down, out hit, heightOfPlayerModel);
         //playerRb.SweepTest(Vector3.down, out hit, heightOfPlayerModel);
         Debug.DrawRay(playerRb.position + playerCollider.center, Vector3.down, Color.blue, 1f);
 
         MovePlayer();
 
-
+        /*
         Vector3 playerVelocity = playerRb.velocity;
         Vector3 rayDirection = transform.TransformDirection(-transform.up);
 
@@ -183,7 +184,7 @@ public class PhysicsCharacterController : MonoBehaviour
         float springForce = (x * rideSpringStrenght) - (relativeVelocity * rideSpringDamper);
 
         // Debug.Log(Time.time.ToString("00:00:00") + " springForce " + springForce);
-
+        
         if (Physics.Raycast(playerRb.position + playerCollider.center, transform.TransformDirection(-Vector3.up), out hit, heightOfPlayerModel))
         {
             // Debug.Log(Time.time.ToString("00:00:00") + "the raycast hit");
@@ -193,17 +194,18 @@ public class PhysicsCharacterController : MonoBehaviour
             forceAmount = springForce * (hit.distance) / rideHeight + rideSpringDamper * (hit.distance - lastDistance);
             // Debug.Log(Time.time.ToString("00:00:00") + "forceAmount " + forceAmount);
             playerRb.AddForceAtPosition(transform.up * forceAmount, transform.position);
+
+            playerRb.AddForce(Physics.gravity * (forceAmount - 1) * playerRb.mass);
+
             lastDistance = hit.distance;
 
-            Debug.Log("hit normal: " + hit.normal);
+            // Debug.Log("hit normal: " + hit.normal);
 
         }
         else
         {
             lastDistance = rideHeight;
-        }
-
-
+        }*/
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -217,14 +219,16 @@ public class PhysicsCharacterController : MonoBehaviour
 
     private void MovePlayer()
     {
-        RaycastHit sweepHit;
-        playerRb.SweepTest(-transform.up, out sweepHit);
+        // RaycastHit sweepHit;
+        // playerRb.SweepTest(-transform.up, out sweepHit); 
+        // Physics.Raycast(playerRb.position + (direction * GetComponent<CapsuleCollider>().radius), Vector3.down, out sweepHit);
+        // Debug.DrawLine(playerRb.position + (direction * GetComponent<CapsuleCollider>().radius), sweepHit.point, Color.black, 1f);
 
-        Debug.DrawLine(sweepHit.point, playerRb.position, Color.red, 2f);
+        // Debug.DrawLine(sweepHit.point, playerRb.position, Color.red, 2f);
 
-        direction = Vector3.ProjectOnPlane(direction, sweepHit.normal);
-        direction.Normalize();
-        playerRb.AddForce(direction * currentSpeed * Time.deltaTime, ForceMode.VelocityChange);
+        // direction = Vector3.ProjectOnPlane(direction, sweepHit.normal);
+        // direction.Normalize();
+        playerRb.AddForce(direction * currentSpeed * Time.fixedDeltaTime, ForceMode.VelocityChange);
         ClampMovementSpeed();
 
         currentVelocity = playerRb.velocity;
@@ -235,15 +239,7 @@ public class PhysicsCharacterController : MonoBehaviour
     private void ClampMovementSpeed()
     {
 
-        playerRb.velocity = new Vector3(Mathf.Clamp(playerRb.velocity.x, -currentSpeed / 10, currentSpeed / 10), Mathf.Max(playerRb.velocity.y, -currentGravity), Mathf.Clamp(playerRb.velocity.z, -currentSpeed / 10, currentSpeed / 10));
+        playerRb.velocity = new Vector3(Mathf.Clamp(playerRb.velocity.x, -currentSpeed / 10, currentSpeed / 10), playerRb.velocity.y, Mathf.Clamp(playerRb.velocity.z, -currentSpeed / 10, currentSpeed / 10));
 
-    }
-
-    public static void CalculateDampedSpring(ref float position, ref float velocity, float goalPosition, float deltaTime, float frequency, float damping)
-    {
-        if (position != goalPosition)
-        {
-
-        }
     }
 }
