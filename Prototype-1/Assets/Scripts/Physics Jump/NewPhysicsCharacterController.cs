@@ -59,7 +59,7 @@ public class NewPhysicsCharacterController : MonoBehaviour
         #endregion Move Player
 
         #region Jump
-        /*
+
         // If jump button is pressed ad upward force.
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -79,7 +79,7 @@ public class NewPhysicsCharacterController : MonoBehaviour
         }
 
         Debug.Log(isJumping);
-        */
+
         #endregion Jump
     }
 
@@ -87,7 +87,7 @@ public class NewPhysicsCharacterController : MonoBehaviour
     {
         MovePlayer();
 
-        /*
+
         if (isJumping && playerRb.velocity.y < 0)
         {
             playerRb.AddForce(Vector3.down * jumpFallForce);
@@ -97,7 +97,7 @@ public class NewPhysicsCharacterController : MonoBehaviour
         {
             playerRb.AddForce(Vector3.down * jumpCancelForce);
         }
-        */
+
     }
 
     private void MovePlayer()
