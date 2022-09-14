@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3632eaa4390e140b2bd8b99dca1e2469, type: 3}
   m_Name: GameModeScriptableObject
   m_EditorClassIdentifier: 
+  currentGameMode: 1
+  modeChangeEvent:
+    m_PersistentCalls:
+      m_Calls: []

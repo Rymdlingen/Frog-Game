@@ -20,18 +20,36 @@ public class CharacterController : MonoBehaviour
 
     public AnimationCurve curve;
 
+    [SerializeField]
+    private GameModeScriptableObject gameModeManager;
+
+    bool canMove;
+
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
         rideHeight = (GetComponentInChildren<BoxCollider>().size.y - playerCollider.height) / 2;
+        gameModeManager.modeChangeEvent.AddListener(CanMove);
+    }
+
+    private void CanMove(GameModes currentGameMode)
+    {
+        if (currentGameMode == GameModes.Explore)
+        {
+            canMove = true;
+        }
+        else if (currentGameMode == GameModes.Map)
+        {
+            canMove = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canMove)
         {
             playerRb.AddForce(jumpForce * Vector3.up, ForceMode.Impulse);
         }
@@ -39,38 +57,41 @@ public class CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Distance to the ground
-        float distanceToTheGround = GetDistanceFromTheGround();
-        if (distanceToTheGround < -0.99f)
+        if (canMove)
         {
-            // No ground nowhere, standard gravity
-            ApplyGravityWithFactor(1.0f);
-        }
-        else
-        {
-            // Gravity
-            float gravityFactor = 1.0f; // gravity factor goes from 0 to 1 when character is above rideHeight
-            if (distanceToTheGround <= rideHeight)
+            // Distance to the ground
+            float distanceToTheGround = GetDistanceFromTheGround();
+            if (distanceToTheGround < -0.99f)
             {
-                gravityFactor = 0;
+                // No ground nowhere, standard gravity
+                ApplyGravityWithFactor(1.0f);
             }
-            else if (distanceToTheGround <= 2 * rideHeight)
+            else
             {
-                gravityFactor = (distanceToTheGround - rideHeight) / rideHeight;
-            }
-            gravityFactor = Mathf.Clamp(gravityFactor, 0, 1);
-            gravityFactor = curve.Evaluate(gravityFactor);
-            ApplyGravityWithFactor(gravityFactor);
+                // Gravity
+                float gravityFactor = 1.0f; // gravity factor goes from 0 to 1 when character is above rideHeight
+                if (distanceToTheGround <= rideHeight)
+                {
+                    gravityFactor = 0;
+                }
+                else if (distanceToTheGround <= 2 * rideHeight)
+                {
+                    gravityFactor = (distanceToTheGround - rideHeight) / rideHeight;
+                }
+                gravityFactor = Mathf.Clamp(gravityFactor, 0, 1);
+                gravityFactor = curve.Evaluate(gravityFactor);
+                ApplyGravityWithFactor(gravityFactor);
 
-            // "Spring" to keep character above the ground
-            float springFactor = 0.0f; // spring factor is 1 when character touches the ground, and is zero when character is exactly at rideHeight
-            if (distanceToTheGround < rideHeight)
-            {
-                springFactor = (rideHeight - distanceToTheGround) / rideHeight;
+                // "Spring" to keep character above the ground
+                float springFactor = 0.0f; // spring factor is 1 when character touches the ground, and is zero when character is exactly at rideHeight
+                if (distanceToTheGround < rideHeight)
+                {
+                    springFactor = (rideHeight - distanceToTheGround) / rideHeight;
+                }
+                springFactor = Mathf.Clamp(springFactor, 0, 1);
+                springFactor = curve.Evaluate(springFactor);
+                ApplySpringForceWithFactor(springFactor);
             }
-            springFactor = Mathf.Clamp(springFactor, 0, 1);
-            springFactor = curve.Evaluate(springFactor);
-            ApplySpringForceWithFactor(springFactor);
         }
 
         /*
