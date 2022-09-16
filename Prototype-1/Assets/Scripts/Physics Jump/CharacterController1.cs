@@ -56,7 +56,7 @@ public class CharacterController1 : MonoBehaviour
 
     [SerializeField]
     private GameModeScriptableObject gameModeManager;
-    bool canMove = true;
+    bool inExplorationMode = true;
 
     // Start is called before the first frame update
     void Start()
@@ -79,18 +79,18 @@ public class CharacterController1 : MonoBehaviour
     {
         if (currentGameMode == GameModes.Explore)
         {
-            canMove = true;
+            inExplorationMode = true;
         }
         else if (currentGameMode == GameModes.Map)
         {
-            canMove = false;
+            inExplorationMode = false;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (canMove)
+        if (inExplorationMode)
         {
             #region Move
 
@@ -155,58 +155,60 @@ public class CharacterController1 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (canMove)
+
+        grounded = GetGroundInfo(out float distanceToGround);
+        if (grounded)
         {
-            grounded = GetGroundInfo(out float distanceToGround);
-            if (grounded)
+            // Gravity
+            float gravityFactor = 1.0f; // gravity factor goes from 0 to 1 when character is above rideHeight
+            if (distanceToGround <= targetRideHeight)
             {
-                // Gravity
-                float gravityFactor = 1.0f; // gravity factor goes from 0 to 1 when character is above rideHeight
-                if (distanceToGround <= targetRideHeight)
-                {
-                    gravityFactor = 0;
-                }
-                else if (distanceToGround <= floorDistanceWhereGravityStartsToSlowDown)
-                {
-                    gravityFactor = (distanceToGround - targetRideHeight) / (floorDistanceWhereGravityStartsToSlowDown - targetRideHeight);
-                }
-                gravityFactor = Mathf.Clamp(gravityFactor, 0, 1);
-                gravityFactor = gravityCurve.Evaluate(gravityFactor);
-                ApplyGravityWithFactor(gravityFactor);
-
-                // "Spring" to keep character above the ground
-                float springFactor = 0.0f; // spring factor is 1 when character touches the ground, and is zero when character is exactly at rideHeight
-                if (distanceToGround <= floorDistanceWhereSpringForceIsMaximal)
-                {
-                    springFactor = 1.0f;
-                }
-                else if (distanceToGround < targetRideHeight)
-                {
-                    springFactor = (targetRideHeight - distanceToGround) / (targetRideHeight - floorDistanceWhereSpringForceIsMaximal);
-                }
-                springFactor = Mathf.Clamp(springFactor, 0, 1);
-                springFactor = springCurve.Evaluate(springFactor);
-                ApplySpringForceWithFactor(springFactor);
+                gravityFactor = 0;
             }
-            else if (isJumping)
+            else if (distanceToGround <= floorDistanceWhereGravityStartsToSlowDown)
             {
-                // Do the jump thing
-                if (playerRb.velocity.y < 0)
-                {
-                    playerRb.AddForce(Vector3.down * jumpFallForce, ForceMode.Force);
-                }
-
-                if (jumpCancelled && playerRb.velocity.y > 0)
-                {
-                    playerRb.AddForce(Vector3.down * jumpCancelForce, ForceMode.Force);
-                }
+                gravityFactor = (distanceToGround - targetRideHeight) / (floorDistanceWhereGravityStartsToSlowDown - targetRideHeight);
             }
-            else
+            gravityFactor = Mathf.Clamp(gravityFactor, 0, 1);
+            gravityFactor = gravityCurve.Evaluate(gravityFactor);
+            ApplyGravityWithFactor(gravityFactor);
+
+            // "Spring" to keep character above the ground
+            float springFactor = 0.0f; // spring factor is 1 when character touches the ground, and is zero when character is exactly at rideHeight
+            if (distanceToGround <= floorDistanceWhereSpringForceIsMaximal)
             {
-                // No ground nowhere, standard gravity
-                ApplyGravityWithFactor(1.0f);
-
+                springFactor = 1.0f;
             }
+            else if (distanceToGround < targetRideHeight)
+            {
+                springFactor = (targetRideHeight - distanceToGround) / (targetRideHeight - floorDistanceWhereSpringForceIsMaximal);
+            }
+            springFactor = Mathf.Clamp(springFactor, 0, 1);
+            springFactor = springCurve.Evaluate(springFactor);
+            ApplySpringForceWithFactor(springFactor);
+        }
+        else if (isJumping)
+        {
+            // Do the jump thing
+            if (playerRb.velocity.y < 0)
+            {
+                playerRb.AddForce(Vector3.down * jumpFallForce, ForceMode.Force);
+            }
+
+            if (jumpCancelled && playerRb.velocity.y > 0)
+            {
+                playerRb.AddForce(Vector3.down * jumpCancelForce, ForceMode.Force);
+            }
+        }
+        else
+        {
+            // No ground nowhere, standard gravity
+            ApplyGravityWithFactor(1.0f);
+
+        }
+
+        if (inExplorationMode)
+        {
 
             #region Move
             MovePlayer();
@@ -251,7 +253,7 @@ public class CharacterController1 : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (canMove)
+        if (inExplorationMode)
         {
             // set renderer actual rotation and scale
             playerRenderer.transform.localScale = Vector3.Lerp(playerRenderer.transform.localScale, rendererTargetScale, 0.1f);
