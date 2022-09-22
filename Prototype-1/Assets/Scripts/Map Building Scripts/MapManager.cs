@@ -20,8 +20,13 @@ public class MapManager : MonoBehaviour
             if (hit.transform.tag == "Cloud")
             {
                 Debug.Log(hit.transform.name);
-            }
 
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    hit.transform.gameObject.SetActive(false);
+                }
+            }
         }
     }
 }
