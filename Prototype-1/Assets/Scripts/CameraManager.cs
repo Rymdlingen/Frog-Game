@@ -14,7 +14,7 @@ public class CameraManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameModeManager.modeChangeEvent.AddListener(SetActiveCamera);
+        gameModeManager.changeModeEvent.AddListener(SetActiveCamera);
     }
 
     private void SetActiveCamera(GameModes currentGameMode)

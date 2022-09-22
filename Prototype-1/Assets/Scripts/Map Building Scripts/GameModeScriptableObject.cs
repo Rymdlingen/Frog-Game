@@ -13,7 +13,7 @@ public class GameModeScriptableObject : ScriptableObject
     [SerializeField]
     private GameModes currentGameMode;
 
-    public UnityEvent<GameModes> modeChangeEvent;
+    public UnityEvent<GameModes> changeModeEvent;
 
     private void Awake()
     {
@@ -22,9 +22,9 @@ public class GameModeScriptableObject : ScriptableObject
 
     private void OnEnable()
     {
-        if (modeChangeEvent == null)
+        if (changeModeEvent == null)
         {
-            modeChangeEvent = new UnityEvent<GameModes>();
+            changeModeEvent = new UnityEvent<GameModes>();
         }
     }
 
@@ -39,6 +39,6 @@ public class GameModeScriptableObject : ScriptableObject
             currentGameMode = GameModes.Explore;
         }
 
-        modeChangeEvent.Invoke(currentGameMode);
+        changeModeEvent.Invoke(currentGameMode);
     }
 }

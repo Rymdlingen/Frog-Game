@@ -31,7 +31,7 @@ public class CharacterController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         playerCollider = GetComponent<CapsuleCollider>();
         rideHeight = (GetComponentInChildren<BoxCollider>().size.y - playerCollider.height) / 2;
-        gameModeManager.modeChangeEvent.AddListener(CanMove);
+        gameModeManager.changeModeEvent.AddListener(CanMove);
     }
 
     private void CanMove(GameModes currentGameMode)

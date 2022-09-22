@@ -61,10 +61,6 @@ public class CharacterController1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-
         grounded = false;
         isJumping = false;
         playerRb = GetComponent<Rigidbody>();
@@ -72,7 +68,7 @@ public class CharacterController1 : MonoBehaviour
         targetRideHeight = (GetComponentInChildren<BoxCollider>().size.y - playerCollider.height) / 2;
         groundCheckDistance = playerCollider.height / 2 + targetRideHeight + 0.1f;
 
-        gameModeManager.modeChangeEvent.AddListener(CanMove);
+        gameModeManager.changeModeEvent.AddListener(CanMove);
     }
 
     private void CanMove(GameModes currentGameMode)
