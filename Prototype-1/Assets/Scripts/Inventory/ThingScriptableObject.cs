@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class ThingScriptableObject : ScriptableObject
 {
     [SerializeField] private string name;
-    [SerializeField] private bool canBePickedUp;
+    [SerializeField] private GameObject model;
 
     public string Name
     {
@@ -16,10 +16,4 @@ public class ThingScriptableObject : ScriptableObject
         private set { name = value; }
     }
 
-    public bool CanBePickedUp
-    {
-        get { return canBePickedUp; }
-
-        private set { canBePickedUp = value; }
-    }
 }

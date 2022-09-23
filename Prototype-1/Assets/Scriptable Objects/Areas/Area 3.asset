@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a6cc1733ad047738d1a6a799afc947, type: 3}
+  m_Name: Area 3
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Flower Field
+  Description: Big colorful flowers next to the lake.
+  <StartingSate>k__BackingField: 0
+  thingsRequiredForUnlocking:
+  - {fileID: 11400000, guid: 7caf15faeb1b14d4a8d2b2eada96ca39, type: 2}
+  - {fileID: 11400000, guid: 92abc8b830e091f429517a8347e2b9dc, type: 2}
+  - {fileID: 11400000, guid: 252dd378037f7c7419a29019486a0075, type: 2}
+  - {fileID: 11400000, guid: 56f17c7c70f84c2419888c1860ea22b2, type: 2}
+  - {fileID: 11400000, guid: 8e6892417df59e647b62b2e299274d96, type: 2}
+  - {fileID: 11400000, guid: 2d6c9dae3a520424c8c48d6878c00f78, type: 2}
+  - {fileID: 11400000, guid: 53188e0fbc595ef469f31d411128bc7c, type: 2}
+  nrOfThingsRequired: 02000000020000000200000002000000010000000300000001000000

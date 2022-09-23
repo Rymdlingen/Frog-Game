@@ -13,18 +13,35 @@ public enum AreaState
 [CreateAssetMenu(fileName = "AreaScriptableObject", menuName = "ScriptableObjects/Area")]
 public class AreaScriptableObject : ScriptableObject
 {
-    [SerializeField]
-    private string _name;
-    public string Name
+    [field: SerializeField] public string Name { get; private set; }
+    [SerializeField] private string Description;
+    [field: SerializeField] public AreaState StartingSate { get; private set; }
+    public List<ThingScriptableObject> thingsRequiredForUnlocking;
+    public int[] nrOfThingsRequired;
+
+    private List<int> savedValues = new List<int>();
+
+    private void OnValidate()
     {
-        get { return _name; }
-        private set {; }
+        if (nrOfThingsRequired.Length != thingsRequiredForUnlocking.Count)
+        {
+            while (savedValues.Count < thingsRequiredForUnlocking.Count)
+            {
+                savedValues.Add(0);
+            }
+
+            for (int i = 0; i < nrOfThingsRequired.Length; i++)
+            {
+                savedValues[i] = nrOfThingsRequired[i];
+            }
+
+            nrOfThingsRequired = new int[thingsRequiredForUnlocking.Count];
+
+            for (int i = 0; i < nrOfThingsRequired.Length; i++)
+            {
+                nrOfThingsRequired[i] = savedValues[i];
+            }
+        }
     }
-    [SerializeField]
-    private bool isDiscovered;
-    [SerializeField]
-    private AreaState currentAreaState;
-    [SerializeField]
-    private List<ThingScriptableObject> itemsRequiredForUnlocking = new List<ThingScriptableObject>();
 }
 

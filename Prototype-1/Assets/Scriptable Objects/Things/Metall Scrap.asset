@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19a6cc1733ad047738d1a6a799afc947, type: 3}
-  m_Name: Area 1
+  m_Script: {fileID: 11500000, guid: 9686b8dbf486da142bc3eff5c35a9ae8, type: 3}
+  m_Name: Metall Scrap
   m_EditorClassIdentifier: 
-  _name: Home
-  isDiscovered: 1
-  currentAreaState: 1
-  itemsRequiredForUnlocking: []
+  name: Metall Scrap
+  model: {fileID: 0}

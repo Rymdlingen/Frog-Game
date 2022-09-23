@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a6cc1733ad047738d1a6a799afc947, type: 3}
+  m_Name: Area 6
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Glade
+  Description: Popular picknik area.
+  <StartingSate>k__BackingField: 0
+  thingsRequiredForUnlocking:
+  - {fileID: 11400000, guid: 6195afc8a8f05364bb34ce3e405b2a44, type: 2}
+  - {fileID: 11400000, guid: 727d821932c3c964d90e37d6ca3a8536, type: 2}
+  nrOfThingsRequired: 0600000001000000

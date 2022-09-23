@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a6cc1733ad047738d1a6a799afc947, type: 3}
+  m_Name: Area 4
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Giant Tree
+  Description: A big tree whit a lot of branches to jump on and it's hollow in some
+    places.
+  <StartingSate>k__BackingField: 0
+  thingsRequiredForUnlocking:
+  - {fileID: 11400000, guid: c2f27907c790dc54d9550fe8051c9a10, type: 2}
+  - {fileID: 11400000, guid: 756aa850980a71a438fcf771c3def9cb, type: 2}
+  - {fileID: 11400000, guid: a2d96fec3abafaf4ba53c0f956c950d3, type: 2}
+  nrOfThingsRequired: 040000000a00000002000000

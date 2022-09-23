@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a6cc1733ad047738d1a6a799afc947, type: 3}
+  m_Name: Area 5
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Rocky lake
+  Description: Rough lake with a lot of rocks and shallow water.
+  <StartingSate>k__BackingField: 0
+  thingsRequiredForUnlocking:
+  - {fileID: 11400000, guid: 481a586e7b7098a45a83facf4a3b22f0, type: 2}
+  - {fileID: 11400000, guid: 4671a03f97005d14f8beac60b29baddb, type: 2}
+  - {fileID: 11400000, guid: bb40ab396d085e441ad530205caf0cc5, type: 2}
+  nrOfThingsRequired: 0a0000000200000007000000
