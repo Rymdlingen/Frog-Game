@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1776
     height: 923
-  m_MinSize: {x: 676, y: 493}
-  m_MaxSize: {x: 12002, y: 12063}
+  m_MinSize: {x: 678, y: 493}
+  m_MaxSize: {x: 12003, y: 12063}
   vertical: 1
-  controlID: 36065
+  controlID: 2099
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,10 +170,10 @@ MonoBehaviour:
     y: 89
     width: 1776
     height: 834
-  m_MinSize: {x: 676, y: 442}
-  m_MaxSize: {x: 12002, y: 8042}
+  m_MinSize: {x: 678, y: 442}
+  m_MaxSize: {x: 12003, y: 8042}
   vertical: 0
-  controlID: 36061
+  controlID: 2095
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,10 +195,10 @@ MonoBehaviour:
     y: 0
     width: 1313
     height: 834
-  m_MinSize: {x: 401, y: 442}
-  m_MaxSize: {x: 8002, y: 8042}
+  m_MinSize: {x: 403, y: 442}
+  m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 36123
+  controlID: 2071
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,10 +220,10 @@ MonoBehaviour:
     y: 0
     width: 1313
     height: 507
-  m_MinSize: {x: 401, y: 221}
-  m_MaxSize: {x: 8001, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 36124
+  controlID: 2035
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,10 +298,10 @@ MonoBehaviour:
     y: 507
     width: 1313
     height: 327
-  m_MinSize: {x: 302, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 303, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 36038
+  controlID: 2072
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3e7afeff
-      m_LastClickedID: -99778
-      m_ExpandedIDs: 3e7afeff68fbffffac4d0000324e0000324f00006a50000060510000d8510000e45100005a52000060520000
+      m_SelectedIDs: 0c520000
+      m_LastClickedID: 21004
+      m_ExpandedIDs: 18fbffffe6500000fe500000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -793,22 +793,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Map Building Scripts
+    - Assets/Scriptable Objects/Areas
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Map Building Scripts
+  - Assets/Scriptable Objects/Areas
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Johanna\Game development\GitHub\Frog-Game\Prototype-1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 131}
-    m_SelectedIDs: c4550000
-    m_LastClickedID: 21956
-    m_ExpandedIDs: 000000009a55000000ca9a3b
+    scrollPos: {x: 0, y: 118}
+    m_SelectedIDs: 80580000
+    m_LastClickedID: 22656
+    m_ExpandedIDs: 000000003057000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -836,7 +836,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009a55000000ca9a3b
+    m_ExpandedIDs: 000000003057000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -861,8 +861,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 26510000
-    m_LastClickedInstanceID: 20774
+    m_SelectedInstanceIDs: 0c520000
+    m_LastClickedInstanceID: 21004
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:

@@ -7,6 +7,8 @@ public class Area : MonoBehaviour
     [SerializeField]
     private AreaScriptableObject areaInfo;
 
+    public AreaScriptableObject AreaInfo { get => areaInfo; private set => areaInfo = value; }
+
     // Start is called before the first frame update
     void Start()
     {

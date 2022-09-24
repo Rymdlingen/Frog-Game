@@ -30,14 +30,41 @@ public class DisplayAreaInfo : MonoBehaviour
 
     }
 
-    private void DisplayInfoForThisArea(GameObject area)
+    private void DisplayInfoForThisArea(Area areaScript)
     {
-        Vector3 backgroundPosition = mapCamera.WorldToScreenPoint(area.transform.position);
+        AreaScriptableObject areaInfo = areaScript.AreaInfo;
+
+        // Set position of background.
+        Vector3 backgroundPosition = mapCamera.WorldToScreenPoint(areaScript.transform.position);
         backgroundPosition = new Vector3(backgroundPosition.x, backgroundPosition.y, 0);
         backgroundTransform.SetPositionAndRotation(backgroundPosition, backgroundTransform.rotation);
-        nameText.SetText(area.name);
-        // Parse data from things needed and nr. of things needed.
+
+        // Set name text.
+        nameText.SetText(areaInfo.Name);
+
+        // Set text for needed things.
+        needText.SetText(GetNeededThingsAndAmount(areaInfo.thingsRequiredForUnlocking, areaInfo.nrOfThingsRequired));
+
+
+
         // Parse data about needed thing from inventory.
         // Set status for button.
+    }
+
+    private string GetNeededThingsAndAmount(List<ThingScriptableObject> things, int[] nrOfThings)
+    {
+        string text = "Needed: \n";
+
+        for (int i = 0; i < things.Count; i++)
+        {
+            text += nrOfThings[i] + " " + things[i].Name + "\n";
+        }
+
+        return text;
+    }
+
+    private void GetNrOfThingsNeeded()
+    {
+
     }
 }

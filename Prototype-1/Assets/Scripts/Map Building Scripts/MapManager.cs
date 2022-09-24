@@ -5,14 +5,14 @@ using UnityEngine.Events;
 
 public class MapManager : MonoBehaviour
 {
-    public UnityEvent<GameObject> isPointingAtArea;
+    public UnityEvent<Area> isPointingAtArea;
 
     // Start is called before the first frame update
     void Start()
     {
         if (isPointingAtArea == null)
         {
-            isPointingAtArea = new UnityEvent<GameObject>();
+            isPointingAtArea = new UnityEvent<Area>();
         }
     }
 
@@ -26,7 +26,7 @@ public class MapManager : MonoBehaviour
             if (hit.transform.tag == "Cloud")
             {
                 Debug.Log(hit.transform.name);
-                isPointingAtArea.Invoke(hit.transform.gameObject);
+                isPointingAtArea.Invoke(hit.transform.gameObject.GetComponentInParent<Area>());
 
                 if (Input.GetMouseButtonDown(0))
                 {
