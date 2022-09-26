@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637994562609902124
-    m_Hash: 3508737734
+      ticks: 637997968815578503
+    m_Hash: 3133583861
   m_LockFileStatus:
     m_FilePath: D:/Johanna/Game development/GitHub/Frog-Game/Prototype-1/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637994562609932126
-    m_Hash: 205177675
+      ticks: 637997968815638517
+    m_Hash: 3999434153
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -328,6 +328,120 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
         revision: 14d129dcc778f8ea2fdf9d0240b47924e4f0dbb1
+        path: 
+    - packageId: com.unity.formats.fbx@4.2.0
+      testable: 0
+      isDirectDependency: 1
+      version: 4.2.0
+      source: 1
+      resolvedPath: D:\Johanna\Game development\GitHub\Frog-Game\Prototype-1\Library\PackageCache\com.unity.formats.fbx@4.2.0
+      assetPath: Packages/com.unity.formats.fbx
+      name: com.unity.formats.fbx
+      displayName: FBX Exporter
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: "The Unity FBX Exporter package makes it easy to send geometry
+        and animation to any application that supports the FBX format and send them
+        back to Unity with minimal effort.\n\nIn particular, this round-trip workflow
+        enables you to export Unity Scenes to FBX files, import them into Autodesk\xAE
+        Maya\xAE, Autodesk\xAE Maya LT\u2122, or Autodesk\xAE 3ds Max\xAE using an
+        artist-friendly interface, export Unity-ready FBX geometry and animation,
+        and safely merge your changes back into those Assets to continue your work
+        in Unity."
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 2.0.1-preview.2
+        - 2.0.1-preview.3
+        - 2.0.1-preview.4
+        - 2.0.1-preview.5
+        - 2.0.1-preview.11
+        - 2.0.2-preview.1
+        - 2.0.3-preview.3
+        - 3.0.0-preview.2
+        - 3.0.1-preview.2
+        - 3.1.0-preview.1
+        - 3.2.0-preview.2
+        - 3.2.1-preview.2
+        - 4.0.0-pre.1
+        - 4.0.0-pre.4
+        - 4.0.1
+        - 4.1.0-pre.2
+        - 4.1.0
+        - 4.1.1
+        - 4.1.2
+        - 4.2.0-pre.1
+        - 4.2.0
+        compatible:
+        - 2.0.1-preview.2
+        - 2.0.1-preview.4
+        - 2.0.1-preview.5
+        - 2.0.1-preview.11
+        - 2.0.2-preview.1
+        - 2.0.3-preview.3
+        - 3.0.0-preview.2
+        - 3.0.1-preview.2
+        - 3.1.0-preview.1
+        - 3.2.0-preview.2
+        - 3.2.1-preview.2
+        - 4.0.0-pre.1
+        - 4.0.0-pre.4
+        - 4.0.1
+        - 4.1.0-pre.2
+        - 4.1.0
+        - 4.1.1
+        - 4.1.2
+        - 4.2.0-pre.1
+        - 4.2.0
+        verified: 
+      dependencies:
+      - name: com.unity.timeline
+        version: 1.7.1
+      - name: com.autodesk.fbx
+        version: 4.2.0
+      resolvedDependencies:
+      - name: com.unity.timeline
+        version: 1.7.1
+      - name: com.unity.modules.director
+        version: 1.0.0
+      - name: com.unity.modules.audio
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.modules.particlesystem
+        version: 1.0.0
+      - name: com.autodesk.fbx
+        version: 4.2.0
+      keywords:
+      - fbx
+      - animation
+      - modeling
+      - maya
+      - max
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637964118960000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.com/Unity-Technologies/com.unity.formats.fbx.git
+        revision: 1ac7c9cbf3bc838b37b5e527b563b59c74a4c203
         path: 
     - packageId: com.unity.ide.rider@2.0.7
       testable: 0
@@ -1149,172 +1263,6 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.textmeshpro.git
         revision: 01e57e3b7de18af9dfe9baaa0a0ff5cc4765c899
-        path: 
-    - packageId: com.unity.timeline@1.4.8
-      testable: 0
-      isDirectDependency: 1
-      version: 1.4.8
-      source: 1
-      resolvedPath: D:\Johanna\Game development\GitHub\Frog-Game\Prototype-1\Library\PackageCache\com.unity.timeline@1.4.8
-      assetPath: Packages/com.unity.timeline
-      name: com.unity.timeline
-      displayName: Timeline
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: Use Unity Timeline to create cinematic content, game-play sequences,
-        audio sequences, and complex particle effects.
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 1.2.0
-        - 1.2.1
-        - 1.2.2
-        - 1.2.3
-        - 1.2.4
-        - 1.2.5
-        - 1.2.6
-        - 1.2.7
-        - 1.2.9
-        - 1.2.10
-        - 1.2.11
-        - 1.2.12
-        - 1.2.13
-        - 1.2.14
-        - 1.2.15
-        - 1.2.16
-        - 1.2.17
-        - 1.2.18
-        - 1.3.0-preview.2
-        - 1.3.0-preview.3
-        - 1.3.0-preview.5
-        - 1.3.0-preview.6
-        - 1.3.0-preview.7
-        - 1.3.0
-        - 1.3.1
-        - 1.3.2
-        - 1.3.3
-        - 1.3.4
-        - 1.3.5
-        - 1.3.6
-        - 1.3.7
-        - 1.4.0-preview.1
-        - 1.4.0-preview.2
-        - 1.4.0-preview.3
-        - 1.4.0-preview.5
-        - 1.4.0-preview.6
-        - 1.4.0-preview.7
-        - 1.4.0
-        - 1.4.1
-        - 1.4.2
-        - 1.4.3
-        - 1.4.4
-        - 1.4.5
-        - 1.4.6
-        - 1.4.7
-        - 1.4.8
-        - 1.5.0-pre.2
-        - 1.5.0-preview.1
-        - 1.5.0-preview.2
-        - 1.5.0-preview.3
-        - 1.5.0-preview.4
-        - 1.5.0-preview.5
-        - 1.5.1-pre.1
-        - 1.5.1-pre.2
-        - 1.5.1-pre.3
-        - 1.5.2
-        - 1.5.4
-        - 1.5.5
-        - 1.5.6
-        - 1.5.7
-        - 1.6.0-pre.1
-        - 1.6.0-pre.3
-        - 1.6.0-pre.4
-        - 1.6.0-pre.5
-        - 1.6.1
-        - 1.6.2
-        - 1.6.3
-        - 1.6.4
-        - 1.7.0-pre.1
-        - 1.7.0-pre.2
-        - 1.7.0
-        - 1.7.1
-        compatible:
-        - 1.4.8
-        - 1.5.0-pre.2
-        - 1.5.0-preview.1
-        - 1.5.0-preview.2
-        - 1.5.0-preview.3
-        - 1.5.0-preview.4
-        - 1.5.0-preview.5
-        - 1.5.1-pre.1
-        - 1.5.1-pre.2
-        - 1.5.1-pre.3
-        - 1.5.2
-        - 1.5.4
-        - 1.5.5
-        - 1.5.6
-        - 1.5.7
-        - 1.6.0-pre.1
-        - 1.6.0-pre.3
-        - 1.6.0-pre.4
-        - 1.6.0-pre.5
-        - 1.6.1
-        - 1.6.2
-        - 1.6.3
-        - 1.6.4
-        - 1.7.0-pre.1
-        - 1.7.0-pre.2
-        - 1.7.0
-        - 1.7.1
-        verified: 1.4.8
-      dependencies:
-      - name: com.unity.modules.director
-        version: 1.0.0
-      - name: com.unity.modules.animation
-        version: 1.0.0
-      - name: com.unity.modules.audio
-        version: 1.0.0
-      - name: com.unity.modules.particlesystem
-        version: 1.0.0
-      resolvedDependencies:
-      - name: com.unity.modules.director
-        version: 1.0.0
-      - name: com.unity.modules.audio
-        version: 1.0.0
-      - name: com.unity.modules.animation
-        version: 1.0.0
-      - name: com.unity.modules.particlesystem
-        version: 1.0.0
-      keywords:
-      - unity
-      - animation
-      - editor
-      - timeline
-      - tools
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637557616100000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-        revision: 527e4364e28028f20f04fc51db671eb4bb910a26
         path: 
     - packageId: com.unity.ugui@1.0.0
       testable: 0
@@ -3657,6 +3605,259 @@ m_PackageAssets:
         type: git
         url: git+https://github.com/Unity-Technologies/com.unity.settings-manager.git
         revision: 473664ccba1496294b741cf169740a5d54b3d0b6
+        path: 
+    - packageId: com.unity.timeline@1.7.1
+      testable: 0
+      isDirectDependency: 1
+      version: 1.7.1
+      source: 1
+      resolvedPath: D:\Johanna\Game development\GitHub\Frog-Game\Prototype-1\Library\PackageCache\com.unity.timeline@1.7.1
+      assetPath: Packages/com.unity.timeline
+      name: com.unity.timeline
+      displayName: Timeline
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Use Unity Timeline to create cinematic content, game-play sequences,
+        audio sequences, and complex particle effects.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.2.0
+        - 1.2.1
+        - 1.2.2
+        - 1.2.3
+        - 1.2.4
+        - 1.2.5
+        - 1.2.6
+        - 1.2.7
+        - 1.2.9
+        - 1.2.10
+        - 1.2.11
+        - 1.2.12
+        - 1.2.13
+        - 1.2.14
+        - 1.2.15
+        - 1.2.16
+        - 1.2.17
+        - 1.2.18
+        - 1.3.0-preview.2
+        - 1.3.0-preview.3
+        - 1.3.0-preview.5
+        - 1.3.0-preview.6
+        - 1.3.0-preview.7
+        - 1.3.0
+        - 1.3.1
+        - 1.3.2
+        - 1.3.3
+        - 1.3.4
+        - 1.3.5
+        - 1.3.6
+        - 1.3.7
+        - 1.4.0-preview.1
+        - 1.4.0-preview.2
+        - 1.4.0-preview.3
+        - 1.4.0-preview.5
+        - 1.4.0-preview.6
+        - 1.4.0-preview.7
+        - 1.4.0
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.4.4
+        - 1.4.5
+        - 1.4.6
+        - 1.4.7
+        - 1.4.8
+        - 1.5.0-pre.2
+        - 1.5.0-preview.1
+        - 1.5.0-preview.2
+        - 1.5.0-preview.3
+        - 1.5.0-preview.4
+        - 1.5.0-preview.5
+        - 1.5.1-pre.1
+        - 1.5.1-pre.2
+        - 1.5.1-pre.3
+        - 1.5.2
+        - 1.5.4
+        - 1.5.5
+        - 1.5.6
+        - 1.5.7
+        - 1.6.0-pre.1
+        - 1.6.0-pre.3
+        - 1.6.0-pre.4
+        - 1.6.0-pre.5
+        - 1.6.1
+        - 1.6.2
+        - 1.6.3
+        - 1.6.4
+        - 1.7.0-pre.1
+        - 1.7.0-pre.2
+        - 1.7.0
+        - 1.7.1
+        compatible:
+        - 1.4.8
+        - 1.5.0-pre.2
+        - 1.5.0-preview.1
+        - 1.5.0-preview.2
+        - 1.5.0-preview.3
+        - 1.5.0-preview.4
+        - 1.5.0-preview.5
+        - 1.5.1-pre.1
+        - 1.5.1-pre.2
+        - 1.5.1-pre.3
+        - 1.5.2
+        - 1.5.4
+        - 1.5.5
+        - 1.5.6
+        - 1.5.7
+        - 1.6.0-pre.1
+        - 1.6.0-pre.3
+        - 1.6.0-pre.4
+        - 1.6.0-pre.5
+        - 1.6.1
+        - 1.6.2
+        - 1.6.3
+        - 1.6.4
+        - 1.7.0-pre.1
+        - 1.7.0-pre.2
+        - 1.7.0
+        - 1.7.1
+        verified: 1.4.8
+      dependencies:
+      - name: com.unity.modules.director
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.modules.audio
+        version: 1.0.0
+      - name: com.unity.modules.particlesystem
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.modules.director
+        version: 1.0.0
+      - name: com.unity.modules.audio
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.modules.particlesystem
+        version: 1.0.0
+      keywords:
+      - unity
+      - animation
+      - editor
+      - timeline
+      - tools
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637824211470000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
+        revision: 9cec37f449d04026a6c454de9e1bf6f34672764e
+        path: 
+    - packageId: com.autodesk.fbx@4.2.0
+      testable: 0
+      isDirectDependency: 0
+      version: 4.2.0
+      source: 1
+      resolvedPath: D:\Johanna\Game development\GitHub\Frog-Game\Prototype-1\Library\PackageCache\com.autodesk.fbx@4.2.0
+      assetPath: Packages/com.autodesk.fbx
+      name: com.autodesk.fbx
+      displayName: Autodesk FBX SDK for Unity
+      author:
+        name: Unity
+        email: 
+        url: 
+      category: 
+      type: 
+      description: "This package provides Unity C# bindings to the Autodesk\xAE FBX\xAE
+        SDK."
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 2.0.0-preview
+        - 2.0.0-preview.4
+        - 2.0.0-preview.5
+        - 2.0.0-preview.6
+        - 2.0.0-preview.7
+        - 2.0.1-preview.1
+        - 3.0.0-preview.1
+        - 3.0.1-preview.1
+        - 3.1.0-preview.1
+        - 3.1.0-preview.2
+        - 4.0.0-pre.1
+        - 4.0.0-pre.2
+        - 4.0.1
+        - 4.1.0-pre.1
+        - 4.1.0
+        - 4.1.1
+        - 4.2.0-pre.1
+        - 4.2.0
+        compatible:
+        - 2.0.0-preview
+        - 2.0.0-preview.4
+        - 2.0.0-preview.5
+        - 2.0.0-preview.6
+        - 2.0.0-preview.7
+        - 2.0.1-preview.1
+        - 3.0.0-preview.1
+        - 3.0.1-preview.1
+        - 3.1.0-preview.1
+        - 3.1.0-preview.2
+        - 4.0.0-pre.1
+        - 4.0.0-pre.2
+        - 4.0.1
+        - 4.1.0-pre.1
+        - 4.1.0
+        - 4.1.1
+        - 4.2.0-pre.1
+        - 4.2.0
+        verified: 
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - fbx
+      - animation
+      - modeling
+      - maya
+      - max
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637964118930000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.com/Unity-Technologies/com.autodesk.fbx.git
+        revision: 22c84fc8d7f91440a57d5c8e828375e248e155b9
         path: 
     - packageId: com.unity.services.core@1.0.1
       testable: 0
