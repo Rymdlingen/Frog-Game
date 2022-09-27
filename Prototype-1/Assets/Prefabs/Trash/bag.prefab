@@ -93,9 +93,10 @@ GameObject:
   - component: {fileID: 3137536982584087090}
   - component: {fileID: 4527107287254062307}
   - component: {fileID: 3105549951847091058}
+  - component: {fileID: 3359774926238982298}
   m_Layer: 0
   m_Name: bag
-  m_TagString: Trash
+  m_TagString: Thing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,6 +179,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9999998, y: 2.4014373, z: 1}
   m_Center: {x: 0, y: 0.20071888, z: 0}
+--- !u!114 &3359774926238982298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677771223871960084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad108cc7b74778545b4ca6ec6ced497c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thingSO: {fileID: 11400000, guid: e0bfff31a1ef2254baef091ecfa2283b, type: 2}
 --- !u!1 &8461177287908334312
 GameObject:
   m_ObjectHideFlags: 0

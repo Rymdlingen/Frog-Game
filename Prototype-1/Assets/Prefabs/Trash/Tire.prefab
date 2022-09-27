@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3567695429380451117}
   - component: {fileID: 7674808189778488256}
   - component: {fileID: 521972368851093015}
+  - component: {fileID: 3833642751770635604}
   m_Layer: 0
   m_Name: Tire
-  m_TagString: Trash
+  m_TagString: Thing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +98,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3833642751770635604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4854751876003002795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad108cc7b74778545b4ca6ec6ced497c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thingSO: {fileID: 11400000, guid: 4a1885526a9c2494da79480cf6824219, type: 2}
 --- !u!1 &5584749659960260898
 GameObject:
   m_ObjectHideFlags: 0

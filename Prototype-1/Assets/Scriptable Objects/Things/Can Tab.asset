@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9686b8dbf486da142bc3eff5c35a9ae8, type: 3}
   m_Name: Can Tab
   m_EditorClassIdentifier: 
-  name: Tab
-  model: {fileID: 0}
+  _name: Can tab
+  model: {fileID: 1984365354360435681, guid: 8a012166f2f254a048450dd742eccea0, type: 3}
+  icon: {fileID: 0}

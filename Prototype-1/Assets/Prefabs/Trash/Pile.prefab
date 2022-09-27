@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3423246062893641483}
   - component: {fileID: 2650539942514743980}
+  - component: {fileID: 1310054569818612150}
   m_Layer: 0
   m_Name: Pile
-  m_TagString: Trash
+  m_TagString: Thing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,6 +65,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6156479, y: 0.7392349, z: 1.579342}
   m_Center: {x: 0, y: 0.25177383, z: -0.043030202}
+--- !u!114 &1310054569818612150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241996484624895396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad108cc7b74778545b4ca6ec6ced497c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thingSO: {fileID: 11400000, guid: 756aa850980a71a438fcf771c3def9cb, type: 2}
 --- !u!1 &5179290440388855939
 GameObject:
   m_ObjectHideFlags: 0

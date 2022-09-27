@@ -6,14 +6,15 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "ThingScriptableObject", menuName = "ScriptableObjects/Thing")]
 public class ThingScriptableObject : ScriptableObject
 {
-    [SerializeField] private string name;
+    [SerializeField] private string _name;
     [SerializeField] private GameObject model;
+    [SerializeField] private Sprite icon;
 
     public string Name
     {
-        get { return name; }
+        get { return _name; }
 
-        private set { name = value; }
+        private set { _name = value; }
     }
 
 }

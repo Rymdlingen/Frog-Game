@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1003502677390816249}
   - component: {fileID: 1968292493639238809}
   - component: {fileID: 6171115879866635204}
+  - component: {fileID: -7997789158054942534}
   m_Layer: 0
   m_Name: Can
-  m_TagString: Trash
+  m_TagString: Thing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +100,19 @@ CapsuleCollider:
   m_Height: 3.0526733
   m_Direction: 1
   m_Center: {x: 0.000000074505806, y: -0.027186075, z: -0.000000074505806}
+--- !u!114 &-7997789158054942534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984365354360435681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad108cc7b74778545b4ca6ec6ced497c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thingSO: {fileID: 11400000, guid: 252dd378037f7c7419a29019486a0075, type: 2}
 --- !u!1 &3952198950649833179
 GameObject:
   m_ObjectHideFlags: 0

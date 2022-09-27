@@ -135,7 +135,7 @@ public class CharacterController1 : MonoBehaviour
                 }
             }
 
-            Debug.Log("isJumping = " + isJumping);
+            //Debug.Log("isJumping = " + isJumping);
 
             /*
             if (grounded && Input.GetButtonDown("Jump"))
@@ -291,7 +291,7 @@ public class CharacterController1 : MonoBehaviour
             // This need to be fixed! Now is jumping stays on forever, I need a better check for if player is grounded.
             //isJumping = false;
         }
-        Debug.Log("grounded = " + grounded);
+        //Debug.Log("grounded = " + grounded);
         return isGround;
     }
 

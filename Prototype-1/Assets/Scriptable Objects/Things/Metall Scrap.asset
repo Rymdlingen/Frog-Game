@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9686b8dbf486da142bc3eff5c35a9ae8, type: 3}
   m_Name: Metall Scrap
   m_EditorClassIdentifier: 
-  name: Metall Scrap
-  model: {fileID: 0}
+  _name: Metall scrap
+  model: {fileID: 1241996484624895396, guid: 928dd1a01680b4f0698b84b441a296ef, type: 3}
+  icon: {fileID: 0}

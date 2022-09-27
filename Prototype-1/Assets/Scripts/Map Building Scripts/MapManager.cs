@@ -25,7 +25,7 @@ public class MapManager : MonoBehaviour
         {
             if (hit.transform.tag == "Cloud")
             {
-                Debug.Log(hit.transform.name);
+                // Debug.Log(hit.transform.name);
                 isPointingAtArea.Invoke(hit.transform.gameObject.GetComponentInParent<Area>());
 
                 if (Input.GetMouseButtonDown(0))

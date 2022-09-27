@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9686b8dbf486da142bc3eff5c35a9ae8, type: 3}
   m_Name: Cigarette Bud
   m_EditorClassIdentifier: 
-  name: Cigarette Bud
+  _name: Cigarette bud
   model: {fileID: 0}
+  icon: {fileID: 0}

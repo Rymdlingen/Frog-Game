@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9686b8dbf486da142bc3eff5c35a9ae8, type: 3}
   m_Name: Bottle Cap
   m_EditorClassIdentifier: 
-  name: Bottle Cap
-  model: {fileID: 0}
+  _name: Bottle cap
+  model: {fileID: 4854751876003002795, guid: 906511c24bb1f4ab1953f510f3c7ac7d, type: 3}
+  icon: {fileID: 0}

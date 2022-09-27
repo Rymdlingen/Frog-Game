@@ -8,11 +8,15 @@ public class DisplayAreaInfo : MonoBehaviour
 {
     [SerializeField] Transform backgroundTransform;
     [SerializeField] TextMeshProUGUI nameText;
-    [SerializeField] TextMeshProUGUI needText;
-    [SerializeField] TextMeshProUGUI haveText;
+    [SerializeField] GameObject requirementsDisplay;
+    [SerializeField] List<GameObject> slots;
+    [SerializeField] GameObject[][] slotsAndText;
+    // needed for each slot.
+    private TextMeshProUGUI nrHaveAndNeed;
+    private Sprite icon;
     [SerializeField] Button unlockButton;
 
-    [SerializeField] InventoryScriptableObject inventory;
+    [SerializeField] Inventory inventory;
 
     [SerializeField] MapManager mapManagerScript;
 
@@ -22,6 +26,13 @@ public class DisplayAreaInfo : MonoBehaviour
     void Start()
     {
         mapManagerScript.isPointingAtArea.AddListener(DisplayInfoForThisArea);
+
+        slotsAndText = new GameObject[slots.Count][];
+        for (int i = 0; i < slots.Count; i++)
+        {
+            Transform slotTransform = slots[i].transform;
+            slotsAndText[i] = new GameObject[] { slotTransform.Find("Amount").gameObject, slotTransform.Find("Icon").gameObject };
+        }
     }
 
     // Update is called once per frame
@@ -33,6 +44,14 @@ public class DisplayAreaInfo : MonoBehaviour
     private void DisplayInfoForThisArea(Area areaScript)
     {
         AreaScriptableObject areaInfo = areaScript.AreaInfo;
+        int nrOfThingsNeeded = areaInfo.nrOfThingsRequired.Length;
+
+        // TODO
+        for (int slot = 0; slot < nrOfThingsNeeded; slot++)
+        {
+            slotsAndText[slot][0].GetComponent<TextMeshProUGUI>().SetText(areaInfo.thingsRequiredForUnlocking[slot].Name);
+            //   slot
+        }
 
         // Set position of background.
         Vector3 backgroundPosition = mapCamera.WorldToScreenPoint(areaScript.transform.position);
@@ -43,7 +62,7 @@ public class DisplayAreaInfo : MonoBehaviour
         nameText.SetText(areaInfo.Name);
 
         // Set text for needed things.
-        needText.SetText(GetNeededThingsAndAmount(areaInfo.thingsRequiredForUnlocking, areaInfo.nrOfThingsRequired));
+        //needText.SetText(GetNeededThingsAndAmount(areaInfo.thingsRequiredForUnlocking, areaInfo.nrOfThingsRequired));
 
 
 
