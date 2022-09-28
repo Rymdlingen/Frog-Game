@@ -8,7 +8,7 @@ public class ThingScriptableObject : ScriptableObject
 {
     [SerializeField] private string _name;
     [SerializeField] private GameObject model;
-    [SerializeField] private Sprite icon;
+    [field: SerializeField] public Sprite Icon { get; private set; }
 
     public string Name
     {

@@ -11,21 +11,16 @@ public class DisplayAreaInfo : MonoBehaviour
     [SerializeField] GameObject requirementsDisplay;
     [SerializeField] List<GameObject> slots;
     [SerializeField] GameObject[][] slotsAndText;
-    // needed for each slot.
-    private TextMeshProUGUI nrHaveAndNeed;
-    private Sprite icon;
     [SerializeField] Button unlockButton;
-
     [SerializeField] Inventory inventory;
-
     [SerializeField] MapManager mapManagerScript;
-
     [SerializeField] Camera mapCamera;
 
     // Start is called before the first frame update
     void Start()
     {
-        mapManagerScript.isPointingAtArea.AddListener(DisplayInfoForThisArea);
+        mapManagerScript.isPointingAtAreaEvent.AddListener(DisplayInfoForThisArea);
+        mapManagerScript.isNotPointingAtAreaEvent.AddListener(SetDisplayVisibility);
 
         slotsAndText = new GameObject[slots.Count][];
         for (int i = 0; i < slots.Count; i++)
@@ -41,16 +36,50 @@ public class DisplayAreaInfo : MonoBehaviour
 
     }
 
+    private void SetDisplayVisibility(bool isVisible)
+    {
+        requirementsDisplay.SetActive(isVisible);
+    }
+
     private void DisplayInfoForThisArea(Area areaScript)
     {
+        // Set display to visible.
+        SetDisplayVisibility(true);
+
         AreaScriptableObject areaInfo = areaScript.AreaInfo;
         int nrOfThingsNeeded = areaInfo.nrOfThingsRequired.Length;
+        int nrOfRequirementsMet = 0;
 
-        // TODO
-        for (int slot = 0; slot < nrOfThingsNeeded; slot++)
+        for (int slot = 0; slot < slots.Count; slot++)
         {
-            slotsAndText[slot][0].GetComponent<TextMeshProUGUI>().SetText(areaInfo.thingsRequiredForUnlocking[slot].Name);
-            //   slot
+            // Putting a thing in a slot.
+            if (slot < nrOfThingsNeeded)
+            {
+                // The thing that goes in this slot.
+                ThingScriptableObject thing = areaInfo.thingsRequiredForUnlocking[slot];
+
+                // Text.
+                int have = CheckIfThingIsInInventory(thing.Name);
+                int need = areaInfo.nrOfThingsRequired[slot];
+                slotsAndText[slot][0].GetComponent<TextMeshProUGUI>().SetText(have.ToString() + " / " + need.ToString());
+
+                // Check if requirement is met.
+                if (have >= need)
+                {
+                    nrOfRequirementsMet++;
+                }
+
+                // Icon.
+                slotsAndText[slot][1].GetComponent<Image>().sprite = thing.Icon;
+
+                // Show slot.
+                slots[slot].SetActive(true);
+            }
+            else
+            {
+                // Hide slot.
+                slots[slot].SetActive(false);
+            }
         }
 
         // Set position of background.
@@ -61,29 +90,30 @@ public class DisplayAreaInfo : MonoBehaviour
         // Set name text.
         nameText.SetText(areaInfo.Name);
 
-        // Set text for needed things.
-        //needText.SetText(GetNeededThingsAndAmount(areaInfo.thingsRequiredForUnlocking, areaInfo.nrOfThingsRequired));
-
-
-
-        // Parse data about needed thing from inventory.
         // Set status for button.
+        if (nrOfRequirementsMet == nrOfThingsNeeded)
+        {
+            unlockButton.interactable = true;
+        }
+        else
+        {
+            unlockButton.interactable = false;
+        }
     }
 
-    private string GetNeededThingsAndAmount(List<ThingScriptableObject> things, int[] nrOfThings)
+    private int CheckIfThingIsInInventory(string thingName)
     {
-        string text = "Needed: \n";
+        int amount;
 
-        for (int i = 0; i < things.Count; i++)
+        if (inventory.thingsInInventory.ContainsKey(thingName))
         {
-            text += nrOfThings[i] + " " + things[i].Name + "\n";
+            amount = inventory.thingsInInventory[thingName];
+        }
+        else
+        {
+            amount = 0;
         }
 
-        return text;
-    }
-
-    private void GetNrOfThingsNeeded()
-    {
-
+        return amount;
     }
 }

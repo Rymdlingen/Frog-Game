@@ -23,6 +23,11 @@ public class AreaScriptableObject : ScriptableObject
 
     private void OnValidate()
     {
+        while (thingsRequiredForUnlocking.Count > 6)
+        {
+            thingsRequiredForUnlocking.RemoveAt(thingsRequiredForUnlocking.Count - 1);
+        }
+
         if (nrOfThingsRequired.Length != thingsRequiredForUnlocking.Count)
         {
             while (savedValues.Count < thingsRequiredForUnlocking.Count)

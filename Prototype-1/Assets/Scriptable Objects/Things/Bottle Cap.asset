@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Bottle cap
   model: {fileID: 4854751876003002795, guid: 906511c24bb1f4ab1953f510f3c7ac7d, type: 3}
-  icon: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: a9bada896ee764ac6a11874e0a3a6879, type: 3}

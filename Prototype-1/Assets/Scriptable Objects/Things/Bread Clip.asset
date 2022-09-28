@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Bread clip
   model: {fileID: 0}
-  icon: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 1e45027408ee34acc947520bb2a60829, type: 3}

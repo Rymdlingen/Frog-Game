@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Candy wrap
   model: {fileID: 0}
-  icon: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 1d795200fb42d4ff7bcef946f3da073c, type: 3}

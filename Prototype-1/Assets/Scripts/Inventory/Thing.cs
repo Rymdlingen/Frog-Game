@@ -5,7 +5,7 @@ using UnityEngine;
 public class Thing : MonoBehaviour
 {
     [SerializeField] private ThingScriptableObject thingSO;
-    public string thingName;
+    public string thingName { get; private set; }
 
     // Start is called before the first frame update
     void Start()

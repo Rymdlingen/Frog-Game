@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Cigarette bud
   model: {fileID: 0}
-  icon: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 8998c6c3eb6f5453f9e3e9c8d07ab662, type: 3}

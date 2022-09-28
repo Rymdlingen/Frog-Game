@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Plastic bag
   model: {fileID: 6677771223871960084, guid: 8ebd61a92cbd54240b79950f7c9ede1c, type: 3}
-  icon: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: d32f8ad3d45814cd4831b7c016b4e4be, type: 3}

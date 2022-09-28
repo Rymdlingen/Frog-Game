@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Metall scrap
   model: {fileID: 1241996484624895396, guid: 928dd1a01680b4f0698b84b441a296ef, type: 3}
-  icon: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 19bfaf31d35c243c7833adb15203d957, type: 3}

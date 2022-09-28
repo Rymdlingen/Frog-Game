@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Gum
   model: {fileID: 0}
-  icon: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 5b7dac7fe79e7f441bdc23586744ec51, type: 3}

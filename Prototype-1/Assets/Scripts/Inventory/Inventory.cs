@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private Dictionary<string, int> thingsInInventory = new Dictionary<string, int>();
+    public Dictionary<string, int> thingsInInventory { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        thingsInInventory = new Dictionary<string, int>();
     }
 
     // Update is called once per frame
