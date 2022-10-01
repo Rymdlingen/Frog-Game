@@ -47,7 +47,7 @@ public class MapManager : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, 8000))
             {
-                if (hit.transform.tag == "Cloud")
+                if (hit.transform.tag == "Area")
                 {
                     isPointingAtArea = true;
                     // Debug.Log(hit.transform.name);
@@ -80,12 +80,18 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    // This is referenced through the button on the area display.
     public void UpdateArea()
     {
-        hit.transform.gameObject.SetActive(false);
+        Area areaScript = hit.transform.GetComponent<Area>();
+
+        if (areaScript.areaState == AreaState.Locked)
+        {
+            hit.transform.Find("Cloud").gameObject.SetActive(false);
+        }
 
         // Send the area that was updated. All areas will listen but only the area that was updated will change. Am I sending the right thing? TODO
-        updateAreaEvent.Invoke(hit.transform.parent.GetComponent<Area>().AreaInfo);
+        updateAreaEvent.Invoke(areaScript.AreaInfo);
     }
 
     private void GetGameMode(GameModes gameMode)

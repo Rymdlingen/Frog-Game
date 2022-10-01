@@ -9,6 +9,7 @@ TagManager:
   - Floor
   - Cloud
   - Thing
+  - Area
   layers:
   - Default
   - TransparentFX

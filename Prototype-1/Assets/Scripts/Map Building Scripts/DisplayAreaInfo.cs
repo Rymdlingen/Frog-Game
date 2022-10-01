@@ -126,7 +126,7 @@ public class DisplayAreaInfo : MonoBehaviour
         }
     }
 
-    private void SetDisplayVisibility(bool isVisible)
+    public void SetDisplayVisibility(bool isVisible)
     {
         requirementsDisplay.SetActive(isVisible);
     }
