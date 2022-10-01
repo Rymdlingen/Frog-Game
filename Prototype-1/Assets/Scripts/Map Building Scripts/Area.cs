@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Area : MonoBehaviour
 {
@@ -12,17 +13,41 @@ public class Area : MonoBehaviour
     [field: SerializeField]
     public AreaState areaState { get; private set; }
 
+    MapManager mapManager;
+
+    public UnityEvent<Area> thisAreaUpdated;
+
     // Start is called before the first frame update
     void Start()
     {
-        areaState = areaInfo.StartingSate;
+        if (thisAreaUpdated == null)
+        {
+            thisAreaUpdated = new UnityEvent<Area>();
+        }
 
-        // add a listener to an event in the map manager. that event -> updateAreaEvent TODO
+        areaState = areaInfo.StartingSate;
+        mapManager = FindObjectOfType<MapManager>();
+        mapManager.updateAreaEvent.AddListener(UpdateArea);
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    public void UpdateArea(AreaScriptableObject updatedAreasSO)
+    {
+        if (areaInfo == updatedAreasSO)
+        {
+            // Send info "I updated to this state". Send area name and new state. 
+            // Update this area. TODO
+
+            if (areaState != AreaState.Thriving)
+            {
+                areaState++;
+                thisAreaUpdated.Invoke(this);
+            }
+        }
     }
 }

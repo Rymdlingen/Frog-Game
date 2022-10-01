@@ -85,7 +85,7 @@ public class MapManager : MonoBehaviour
         hit.transform.gameObject.SetActive(false);
 
         // Send the area that was updated. All areas will listen but only the area that was updated will change. Am I sending the right thing? TODO
-        updateAreaEvent.Invoke(hit.transform.parent.GetComponent<AreaScriptableObject>());
+        updateAreaEvent.Invoke(hit.transform.parent.GetComponent<Area>().AreaInfo);
     }
 
     private void GetGameMode(GameModes gameMode)

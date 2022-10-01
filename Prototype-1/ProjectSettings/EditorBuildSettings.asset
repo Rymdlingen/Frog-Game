@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PhysicsJump.unity
     guid: 39628f58adf29cb4db3f3f568e45fca2
   - enabled: 1
-    path: Assets/Scenes/BuildMapPrototype.unity
+    path: Assets/Scenes/UpdatingAreasPrototype.unity
     guid: abdc0b4b5293e4ba7b073ccb91488d25
   m_configObjects: {}
