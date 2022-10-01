@@ -36,31 +36,56 @@ public class DisplayAreaInfo : MonoBehaviour
 
     }
 
-    private void SetDisplayVisibility(bool isVisible)
-    {
-        requirementsDisplay.SetActive(isVisible);
-    }
+
 
     private void DisplayInfoForThisArea(Area areaScript)
     {
+        AreaScriptableObject areaInfo = areaScript.AreaInfo;
+
+        // Check the state of the area.
+        AreaState currentAreaState = areaScript.areaState;
+
+        // Set the right requirements.
+        List<ThingScriptableObject> requiredThings;
+        int[] nrOfThingsRequired;
+        switch (currentAreaState)
+        {
+            case AreaState.Locked:
+                requiredThings = areaInfo.thingsRequiredForUnlock;
+                nrOfThingsRequired = areaInfo.nrOfThingsRequiredUnlock;
+                break;
+            case AreaState.Dirty:
+                requiredThings = areaInfo.thingsRequiredForClean;
+                nrOfThingsRequired = areaInfo.nrOfThingsRequiredClean;
+                break;
+            case AreaState.Clean:
+                requiredThings = areaInfo.thingsRequiredForThrive;
+                nrOfThingsRequired = areaInfo.nrOfThingsRequiredThrive;
+                break;
+            case AreaState.Thriving:
+                return;
+            default:
+                return;
+        }
+
         // Set display to visible.
         SetDisplayVisibility(true);
 
-        AreaScriptableObject areaInfo = areaScript.AreaInfo;
-        int nrOfThingsNeeded = areaInfo.nrOfThingsRequired.Length;
+        int nrOfThingsNeeded = nrOfThingsRequired.Length;
         int nrOfRequirementsMet = 0;
 
+        // Display requirements.
         for (int slot = 0; slot < slots.Count; slot++)
         {
             // Putting a thing in a slot.
             if (slot < nrOfThingsNeeded)
             {
                 // The thing that goes in this slot.
-                ThingScriptableObject thing = areaInfo.thingsRequiredForUnlocking[slot];
+                ThingScriptableObject thing = requiredThings[slot];
 
                 // Text.
                 int have = CheckIfThingIsInInventory(thing.Name);
-                int need = areaInfo.nrOfThingsRequired[slot];
+                int need = nrOfThingsRequired[slot];
                 slotsAndText[slot][0].GetComponent<TextMeshProUGUI>().SetText(have.ToString() + " / " + need.ToString());
 
                 // Check if requirement is met.
@@ -99,6 +124,11 @@ public class DisplayAreaInfo : MonoBehaviour
         {
             unlockButton.interactable = false;
         }
+    }
+
+    private void SetDisplayVisibility(bool isVisible)
+    {
+        requirementsDisplay.SetActive(isVisible);
     }
 
     private int CheckIfThingIsInInventory(string thingName)

@@ -16,35 +16,54 @@ public class AreaScriptableObject : ScriptableObject
     [field: SerializeField] public string Name { get; private set; }
     [SerializeField] private string Description;
     [field: SerializeField] public AreaState StartingSate { get; private set; }
-    public List<ThingScriptableObject> thingsRequiredForUnlocking;
-    public int[] nrOfThingsRequired;
 
-    private List<int> savedValues = new List<int>();
+    [Header("Unlock")]
+    public List<ThingScriptableObject> thingsRequiredForUnlock;
+    public int[] nrOfThingsRequiredUnlock;
+    private List<int> savedValuesUnlock = new List<int>();
+
+    [Header("Clean")]
+    public List<ThingScriptableObject> thingsRequiredForClean;
+    public int[] nrOfThingsRequiredClean;
+    private List<int> savedValuesClean = new List<int>();
+
+    [Header("Thriving")]
+    public List<ThingScriptableObject> thingsRequiredForThrive;
+    public int[] nrOfThingsRequiredThrive;
+    private List<int> savedValuesThrive = new List<int>();
+
 
     private void OnValidate()
     {
-        while (thingsRequiredForUnlocking.Count > 6)
+        UpdateRequirements(thingsRequiredForUnlock, nrOfThingsRequiredUnlock, savedValuesUnlock);
+        UpdateRequirements(thingsRequiredForClean, nrOfThingsRequiredClean, savedValuesClean);
+        UpdateRequirements(thingsRequiredForThrive, nrOfThingsRequiredThrive, savedValuesThrive);
+    }
+
+    private void UpdateRequirements(List<ThingScriptableObject> requiredThings, int[] nrOfRequiredThings, List<int> savedValues)
+    {
+        while (requiredThings.Count > 6)
         {
-            thingsRequiredForUnlocking.RemoveAt(thingsRequiredForUnlocking.Count - 1);
+            requiredThings.RemoveAt(requiredThings.Count - 1);
         }
 
-        if (nrOfThingsRequired.Length != thingsRequiredForUnlocking.Count)
+        if (nrOfRequiredThings.Length != requiredThings.Count)
         {
-            while (savedValues.Count < thingsRequiredForUnlocking.Count)
+            while (savedValues.Count < requiredThings.Count)
             {
                 savedValues.Add(0);
             }
 
-            for (int i = 0; i < nrOfThingsRequired.Length; i++)
+            for (int i = 0; i < nrOfRequiredThings.Length; i++)
             {
-                savedValues[i] = nrOfThingsRequired[i];
+                savedValues[i] = nrOfRequiredThings[i];
             }
 
-            nrOfThingsRequired = new int[thingsRequiredForUnlocking.Count];
+            nrOfRequiredThings = new int[requiredThings.Count];
 
-            for (int i = 0; i < nrOfThingsRequired.Length; i++)
+            for (int i = 0; i < nrOfRequiredThings.Length; i++)
             {
-                nrOfThingsRequired[i] = savedValues[i];
+                nrOfRequiredThings[i] = savedValues[i];
             }
         }
     }

@@ -7,6 +7,7 @@ public class MapManager : MonoBehaviour
 {
     public UnityEvent<Area> isPointingAtAreaEvent;
     public UnityEvent<bool> isNotPointingAtAreaEvent;
+    public UnityEvent<AreaScriptableObject> updateAreaEvent;
 
     private bool isPointingAtArea;
 
@@ -27,6 +28,11 @@ public class MapManager : MonoBehaviour
         if (isNotPointingAtAreaEvent == null)
         {
             isNotPointingAtAreaEvent = new UnityEvent<bool>();
+        }
+
+        if (updateAreaEvent == null)
+        {
+            updateAreaEvent = new UnityEvent<AreaScriptableObject>();
         }
 
         gameModeManager.changeModeEvent.AddListener(GetGameMode);
@@ -77,6 +83,9 @@ public class MapManager : MonoBehaviour
     public void UpdateArea()
     {
         hit.transform.gameObject.SetActive(false);
+
+        // Send the area that was updated. All areas will listen but only the area that was updated will change. Am I sending the right thing? TODO
+        updateAreaEvent.Invoke(hit.transform.parent.GetComponent<AreaScriptableObject>());
     }
 
     private void GetGameMode(GameModes gameMode)

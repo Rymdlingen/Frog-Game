@@ -15,7 +15,14 @@ MonoBehaviour:
   <Name>k__BackingField: Glade
   Description: Popular picknik area.
   <StartingSate>k__BackingField: 0
-  thingsRequiredForUnlocking:
-  - {fileID: 11400000, guid: 6195afc8a8f05364bb34ce3e405b2a44, type: 2}
+  thingsRequiredForUnlock:
+  - {fileID: 11400000, guid: 2d6c9dae3a520424c8c48d6878c00f78, type: 2}
+  nrOfThingsRequiredUnlock: 14000000
+  thingsRequiredForClean:
+  - {fileID: 11400000, guid: c2f27907c790dc54d9550fe8051c9a10, type: 2}
+  nrOfThingsRequiredClean: 02000000
+  thingsRequiredForThrive:
+  - {fileID: 11400000, guid: 481a586e7b7098a45a83facf4a3b22f0, type: 2}
+  - {fileID: 11400000, guid: bb40ab396d085e441ad530205caf0cc5, type: 2}
   - {fileID: 11400000, guid: 727d821932c3c964d90e37d6ca3a8536, type: 2}
-  nrOfThingsRequired: 0600000001000000
+  nrOfThingsRequiredThrive: 010000000500000002000000

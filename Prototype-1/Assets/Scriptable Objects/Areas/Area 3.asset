@@ -15,9 +15,12 @@ MonoBehaviour:
   <Name>k__BackingField: Flower Field
   Description: Big colorful flowers next to the lake.
   <StartingSate>k__BackingField: 0
-  thingsRequiredForUnlocking:
-  - {fileID: 11400000, guid: 252dd378037f7c7419a29019486a0075, type: 2}
-  - {fileID: 11400000, guid: 4a1885526a9c2494da79480cf6824219, type: 2}
+  thingsRequiredForUnlock:
+  - {fileID: 11400000, guid: c2f27907c790dc54d9550fe8051c9a10, type: 2}
+  nrOfThingsRequiredUnlock: 07000000
+  thingsRequiredForClean:
+  - {fileID: 11400000, guid: 0afd4975112fdaa4281989ff5116cd3a, type: 2}
+  nrOfThingsRequiredClean: 08000000
+  thingsRequiredForThrive:
   - {fileID: 11400000, guid: 756aa850980a71a438fcf771c3def9cb, type: 2}
-  - {fileID: 11400000, guid: e0bfff31a1ef2254baef091ecfa2283b, type: 2}
-  nrOfThingsRequired: 01000000010000000100000001000000
+  nrOfThingsRequiredThrive: 0c000000

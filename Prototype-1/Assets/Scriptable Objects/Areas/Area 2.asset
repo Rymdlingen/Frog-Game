@@ -16,7 +16,18 @@ MonoBehaviour:
   Description: A lake where there used to live a lot of frogs, it has areas with
     deep water.
   <StartingSate>k__BackingField: 0
-  thingsRequiredForUnlocking:
+  thingsRequiredForUnlock:
   - {fileID: 11400000, guid: 52a8fc8aaab867448a74925d28947b79, type: 2}
   - {fileID: 11400000, guid: 4a1885526a9c2494da79480cf6824219, type: 2}
-  nrOfThingsRequired: 0500000003000000
+  - {fileID: 11400000, guid: 7caf15faeb1b14d4a8d2b2eada96ca39, type: 2}
+  - {fileID: 11400000, guid: 92abc8b830e091f429517a8347e2b9dc, type: 2}
+  nrOfThingsRequiredUnlock: 01000000020000000300000004000000
+  thingsRequiredForClean:
+  - {fileID: 11400000, guid: 252dd378037f7c7419a29019486a0075, type: 2}
+  - {fileID: 11400000, guid: 56f17c7c70f84c2419888c1860ea22b2, type: 2}
+  - {fileID: 11400000, guid: 8e6892417df59e647b62b2e299274d96, type: 2}
+  nrOfThingsRequiredClean: 050000000600000007000000
+  thingsRequiredForThrive:
+  - {fileID: 11400000, guid: 2d6c9dae3a520424c8c48d6878c00f78, type: 2}
+  - {fileID: 11400000, guid: 53188e0fbc595ef469f31d411128bc7c, type: 2}
+  nrOfThingsRequiredThrive: 0800000009000000
