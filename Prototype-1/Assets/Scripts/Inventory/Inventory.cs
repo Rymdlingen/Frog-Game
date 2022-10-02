@@ -6,16 +6,27 @@ public class Inventory : MonoBehaviour
 {
     public Dictionary<string, int> thingsInInventory { get; private set; }
 
+    [SerializeField] private MapManager mapManager;
+
     // Start is called before the first frame update
     void Start()
     {
         thingsInInventory = new Dictionary<string, int>();
+        mapManager.updateInventoryEvent.AddListener(UpdateInventory);
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    private void UpdateInventory(List<ThingScriptableObject> things, int[] nrOfThings)
+    {
+        for (int i = 0; i < things.Count; i++)
+        {
+            RemoveFromInventory(things[i].Name, nrOfThings[i]);
+        }
     }
 
     public void AddToInventory(string thing, int amount = 1)

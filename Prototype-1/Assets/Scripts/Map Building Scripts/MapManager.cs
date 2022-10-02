@@ -8,6 +8,7 @@ public class MapManager : MonoBehaviour
     public UnityEvent<Area> isPointingAtAreaEvent;
     public UnityEvent<bool> isNotPointingAtAreaEvent;
     public UnityEvent<AreaScriptableObject> updateAreaEvent;
+    public UnityEvent<List<ThingScriptableObject>, int[]> updateInventoryEvent;
 
     private bool isPointingAtArea;
 
@@ -33,6 +34,11 @@ public class MapManager : MonoBehaviour
         if (updateAreaEvent == null)
         {
             updateAreaEvent = new UnityEvent<AreaScriptableObject>();
+        }
+
+        if (updateInventoryEvent == null)
+        {
+            updateInventoryEvent = new UnityEvent<List<ThingScriptableObject>, int[]>();
         }
 
         gameModeManager.changeModeEvent.AddListener(GetGameMode);
@@ -88,10 +94,21 @@ public class MapManager : MonoBehaviour
         if (areaScript.areaState == AreaState.Locked)
         {
             hit.transform.Find("Cloud").gameObject.SetActive(false);
+            updateInventoryEvent.Invoke(areaScript.AreaInfo.thingsRequiredForUnlock, areaScript.AreaInfo.nrOfThingsRequiredUnlock);
+        }
+        else if (areaScript.areaState == AreaState.Dirty)
+        {
+            updateInventoryEvent.Invoke(areaScript.AreaInfo.thingsRequiredForClean, areaScript.AreaInfo.nrOfThingsRequiredClean);
+        }
+        else if (areaScript.areaState == AreaState.Clean)
+        {
+            updateInventoryEvent.Invoke(areaScript.AreaInfo.thingsRequiredForThrive, areaScript.AreaInfo.nrOfThingsRequiredThrive);
         }
 
         // Send the area that was updated. All areas will listen but only the area that was updated will change. Am I sending the right thing? TODO
         updateAreaEvent.Invoke(areaScript.AreaInfo);
+
+
     }
 
     private void GetGameMode(GameModes gameMode)
