@@ -52,11 +52,13 @@ public class CharacterController1 : MonoBehaviour
 
     [SerializeField] float gravityModifier;
 
-
-
     [SerializeField]
     private GameModeScriptableObject gameModeManager;
     bool inExplorationMode = true;
+
+    [SerializeField]
+    private GameManager gameManager;
+    bool gameIsPaused = false;
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +71,12 @@ public class CharacterController1 : MonoBehaviour
         groundCheckDistance = playerCollider.height / 2 + targetRideHeight + 0.1f;
 
         gameModeManager.changeModeEvent.AddListener(CanMove);
+        gameManager.pauseGameEvent.AddListener(PauseGame);
+    }
+
+    private void PauseGame(bool isPaused)
+    {
+        gameIsPaused = isPaused;
     }
 
     private void CanMove(GameModes currentGameMode)
@@ -86,7 +94,7 @@ public class CharacterController1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inExplorationMode)
+        if (inExplorationMode && !gameIsPaused)
         {
             #region Move
 
@@ -151,7 +159,8 @@ public class CharacterController1 : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        // Keeping player on ground and making player fall if jumping.
+        #region Gravity
         grounded = GetGroundInfo(out float distanceToGround);
         if (grounded)
         {
@@ -203,7 +212,9 @@ public class CharacterController1 : MonoBehaviour
 
         }
 
-        if (inExplorationMode)
+        #endregion Gravity
+
+        if (inExplorationMode && !gameIsPaused)
         {
 
             #region Move
@@ -249,7 +260,7 @@ public class CharacterController1 : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (inExplorationMode)
+        if (inExplorationMode && !gameIsPaused)
         {
             // set renderer actual rotation and scale
             playerRenderer.transform.localScale = Vector3.Lerp(playerRenderer.transform.localScale, rendererTargetScale, 0.1f);

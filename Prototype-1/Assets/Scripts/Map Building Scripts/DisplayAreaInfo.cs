@@ -16,11 +16,16 @@ public class DisplayAreaInfo : MonoBehaviour
     [SerializeField] MapManager mapManagerScript;
     [SerializeField] Camera mapCamera;
 
+    [SerializeField]
+    private GameManager gameManager;
+    bool gameIsPaused = false;
+
     // Start is called before the first frame update
     void Start()
     {
         mapManagerScript.isPointingAtAreaEvent.AddListener(DisplayInfoForThisArea);
         mapManagerScript.isNotPointingAtAreaEvent.AddListener(SetDisplayVisibility);
+        gameManager.pauseGameEvent.AddListener(PauseGame);
 
         slotsAndText = new GameObject[slots.Count][];
         for (int i = 0; i < slots.Count; i++)
@@ -36,10 +41,19 @@ public class DisplayAreaInfo : MonoBehaviour
 
     }
 
+    private void PauseGame(bool isPaused)
+    {
+        gameIsPaused = isPaused;
+    }
 
 
     private void DisplayInfoForThisArea(Area areaScript)
     {
+        if (gameIsPaused)
+        {
+            return;
+        }
+
         AreaScriptableObject areaInfo = areaScript.AreaInfo;
 
         // Check the state of the area.
