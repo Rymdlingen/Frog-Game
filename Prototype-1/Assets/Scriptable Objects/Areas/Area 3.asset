@@ -16,8 +16,8 @@ MonoBehaviour:
   Description: Big colorful flowers next to the lake.
   <StartingSate>k__BackingField: 0
   thingsRequiredForUnlock:
-  - {fileID: 11400000, guid: c2f27907c790dc54d9550fe8051c9a10, type: 2}
-  nrOfThingsRequiredUnlock: 07000000
+  - {fileID: 11400000, guid: e0bfff31a1ef2254baef091ecfa2283b, type: 2}
+  nrOfThingsRequiredUnlock: 01000000
   thingsRequiredForClean:
   - {fileID: 11400000, guid: 0afd4975112fdaa4281989ff5116cd3a, type: 2}
   nrOfThingsRequiredClean: 08000000

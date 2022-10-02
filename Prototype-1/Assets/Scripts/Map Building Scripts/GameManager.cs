@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     bool gameIsPaused = false;
 
+    [SerializeField] private EndGameManager endGameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class GameManager : MonoBehaviour
         {
             pauseGameEvent = new UnityEvent<bool>();
         }
+
+        endGameManager.allGoalsMetEvent.AddListener(EndGame);
     }
 
     // Update is called once per frame
@@ -57,9 +61,12 @@ public class GameManager : MonoBehaviour
             {
                 PauseGame();
             }
-
-
         }
+    }
+
+    private void EndGame()
+    {
+        PauseGame();
     }
 
     public void PauseGame()
@@ -69,6 +76,7 @@ public class GameManager : MonoBehaviour
         CursorVisibleAndConfined();
 
         SetPauseScreenVisibility(gameIsPaused);
+
         pauseGameEvent.Invoke(gameIsPaused);
     }
 

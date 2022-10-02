@@ -50,7 +50,7 @@ public class Inventory : MonoBehaviour
         if (collision.gameObject.CompareTag("Thing"))
         {
             AddToInventory(collision.gameObject.GetComponent<Thing>().thingName);
-            Debug.Log("picked up: " + collision.gameObject.GetComponent<Thing>().thingName);
+            // Debug.Log("picked up: " + collision.gameObject.GetComponent<Thing>().thingName);
             Destroy(collision.gameObject);
         }
     }
