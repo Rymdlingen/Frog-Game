@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a6cc1733ad047738d1a6a799afc947, type: 3}
   m_Name: Area 6
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Glade
+  <Name>k__BackingField: Deep Forest
   Description: Popular picknik area.
   <StartingSate>k__BackingField: 0
   thingsRequiredForUnlock:

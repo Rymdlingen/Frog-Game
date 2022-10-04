@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a6cc1733ad047738d1a6a799afc947, type: 3}
   m_Name: Area 1
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Home
+  <Name>k__BackingField: Rocks
   Description: Where your home is.
   <StartingSate>k__BackingField: 1
-  thingsRequiredForUnlocking: []
-  nrOfThingsRequired: 
+  thingsRequiredForUnlock: []
+  nrOfThingsRequiredUnlock: 
+  thingsRequiredForClean: []
+  nrOfThingsRequiredClean: 
+  thingsRequiredForThrive: []
+  nrOfThingsRequiredThrive: 

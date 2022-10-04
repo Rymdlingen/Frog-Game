@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a6cc1733ad047738d1a6a799afc947, type: 3}
   m_Name: Area 2
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Deep Water
+  <Name>k__BackingField: Home
   Description: A lake where there used to live a lot of frogs, it has areas with
     deep water.
   <StartingSate>k__BackingField: 0
