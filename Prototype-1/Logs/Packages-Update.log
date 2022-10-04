@@ -73,3 +73,14 @@ Update Mode: updateDependencies
 
 The following packages were updated:
   com.unity.ide.rider from version 2.0.7 to 3.0.15
+
+=== Tue Oct  4 16:39:05 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.cinemachine from version 2.6.17 to 2.8.6
+  com.unity.probuilder from version 4.5.2 to 5.0.3
+  com.unity.render-pipelines.universal from version 10.10.0 to 12.1.7
+  com.unity.timeline from version 1.4.8 to 1.6.4

@@ -11,6 +11,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
   m_Name: 
-  m_EditorClassIdentifier: UnityEditor.CoreModule:UnityEditor.Experimental.TerrainAPI:SetHeightTool
+  m_EditorClassIdentifier: UnityEditor.CoreModule:UnityEditor.TerrainTools:SetHeightTool
   m_HeightSpace: 0
-  m_TargetHeight: 2
+  m_TargetHeight: 4
