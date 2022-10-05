@@ -13,17 +13,15 @@ MonoBehaviour:
   m_Name: Area 4
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Pond
-  Description: A big tree whit a lot of branches to jump on and it's hollow in some
-    places.
+  Description: A lake where there used to live a lot of frogs, it has areas with
+    deep water.
   <StartingSate>k__BackingField: 0
   thingsRequiredForUnlock:
-  - {fileID: 11400000, guid: a2d96fec3abafaf4ba53c0f956c950d3, type: 2}
-  - {fileID: 11400000, guid: 6195afc8a8f05364bb34ce3e405b2a44, type: 2}
-  nrOfThingsRequiredUnlock: 0300000002000000
+  - {fileID: 11400000, guid: 4a1885526a9c2494da79480cf6824219, type: 2}
+  nrOfThingsRequiredUnlock: 01000000
   thingsRequiredForClean:
-  - {fileID: 11400000, guid: 727d821932c3c964d90e37d6ca3a8536, type: 2}
-  - {fileID: 11400000, guid: e0bfff31a1ef2254baef091ecfa2283b, type: 2}
-  nrOfThingsRequiredClean: 0100000005000000
+  - {fileID: 11400000, guid: 252dd378037f7c7419a29019486a0075, type: 2}
+  nrOfThingsRequiredClean: 01000000
   thingsRequiredForThrive:
-  - {fileID: 11400000, guid: bb40ab396d085e441ad530205caf0cc5, type: 2}
-  nrOfThingsRequiredThrive: 2a000000
+  - {fileID: 11400000, guid: 756aa850980a71a438fcf771c3def9cb, type: 2}
+  nrOfThingsRequiredThrive: 01000000

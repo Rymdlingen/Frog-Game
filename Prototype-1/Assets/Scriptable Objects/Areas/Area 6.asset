@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Area 6
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Deep Forest
-  Description: Popular picknik area.
+  Description: Dark, deep and old forest and a swamp.
   <StartingSate>k__BackingField: 0
   thingsRequiredForUnlock:
   - {fileID: 11400000, guid: 252dd378037f7c7419a29019486a0075, type: 2}

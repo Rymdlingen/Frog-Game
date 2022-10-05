@@ -50,22 +50,22 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
-    - _FoamDistance: 0.03
+    - _FoamDistance: 0.124
     - _FoamHardness: 0.123
-    - _FoamOpacity: 0.6
+    - _FoamOpacity: 0.542
     - _FoamScale: 0.38
-    - _FoamSpeed: 0.125
-    - _FresnelIntensity: 0.6
-    - _Opacity: 0.55
-    - _OpacityDepth: 17
+    - _FoamSpeed: 0
+    - _FresnelIntensity: 0
+    - _Opacity: 0.109
+    - _OpacityDepth: 20
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReflectionsCutoff: 0.4
-    - _ReflectionsCutoffScale: 16
-    - _ReflectionsCutoffScrollSpeed: -0.025
-    - _ReflectionsOpacity: 0.85
-    - _ReflectionsScale: 22
-    - _ReflectionsScrollSpeed: 0.045
+    - _ReflectionsCutoff: 0
+    - _ReflectionsCutoffScale: 1
+    - _ReflectionsCutoffScrollSpeed: 0
+    - _ReflectionsOpacity: 0
+    - _ReflectionsScale: 1
+    - _ReflectionsScrollSpeed: 0
     - _ShallowColorDepth: 4
     - _WaveAmplitude: 0.5
     - _WaveIntensity: 0.15

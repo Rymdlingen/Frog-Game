@@ -113,20 +113,20 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
     - _EnvironmentReflections: 1
-    - _FoamDistance: 0.069
+    - _FoamDistance: 0.12
     - _FoamHardness: 0
-    - _FoamOpacity: 0.167
+    - _FoamOpacity: 0.145
     - _FoamScale: 0.2
     - _FoamSpeed: 0.125
-    - _FresnelIntensity: 0.4
+    - _FresnelIntensity: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
     - _Occlusion: 7.5
     - _OcclusionStrength: 1
-    - _Opacity: 0.014
-    - _OpacityDepth: 3.1
+    - _Opacity: 0
+    - _OpacityDepth: 20
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -137,7 +137,7 @@ Material:
     - _ReflectionsOpacity: 0.65
     - _ReflectionsScale: 4.8
     - _ReflectionsScrollSpeed: 0.05
-    - _ShallowColorDepth: 1.9
+    - _ShallowColorDepth: 1.4
     - _Shininess: 0.078125
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0

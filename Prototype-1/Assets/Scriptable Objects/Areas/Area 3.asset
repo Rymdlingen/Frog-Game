@@ -13,14 +13,17 @@ MonoBehaviour:
   m_Name: Area 3
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Forest
-  Description: Big colorful flowers next to the lake.
+  Description: A big tree whit a lot of branches to jump on and it's hollow in some
+    places.
   <StartingSate>k__BackingField: 0
   thingsRequiredForUnlock:
-  - {fileID: 11400000, guid: e0bfff31a1ef2254baef091ecfa2283b, type: 2}
-  nrOfThingsRequiredUnlock: 01000000
+  - {fileID: 11400000, guid: a2d96fec3abafaf4ba53c0f956c950d3, type: 2}
+  - {fileID: 11400000, guid: 6195afc8a8f05364bb34ce3e405b2a44, type: 2}
+  nrOfThingsRequiredUnlock: 0300000002000000
   thingsRequiredForClean:
-  - {fileID: 11400000, guid: 0afd4975112fdaa4281989ff5116cd3a, type: 2}
-  nrOfThingsRequiredClean: 08000000
+  - {fileID: 11400000, guid: 727d821932c3c964d90e37d6ca3a8536, type: 2}
+  - {fileID: 11400000, guid: e0bfff31a1ef2254baef091ecfa2283b, type: 2}
+  nrOfThingsRequiredClean: 0100000005000000
   thingsRequiredForThrive:
-  - {fileID: 11400000, guid: 756aa850980a71a438fcf771c3def9cb, type: 2}
-  nrOfThingsRequiredThrive: 0c000000
+  - {fileID: 11400000, guid: bb40ab396d085e441ad530205caf0cc5, type: 2}
+  nrOfThingsRequiredThrive: 2a000000

@@ -28,7 +28,11 @@ public class UpdatingObject : MonoBehaviour
     {
         areaScript = GetComponentInParent<Area>();
         areaSOWhereThingIs = areaScript.AreaInfo;
-        currentModel = transform.GetChild(0).gameObject;
+
+        if (transform.childCount > 0)
+        {
+            currentModel = transform.GetChild(0).gameObject;
+        }
 
         areaScript.thisAreaUpdated.AddListener(UpdateThing);
     }
