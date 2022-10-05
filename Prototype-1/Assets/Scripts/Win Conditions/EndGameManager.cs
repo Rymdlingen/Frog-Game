@@ -27,9 +27,32 @@ public class EndGameManager : MonoBehaviour
             allGoalsMetEvent = new UnityEvent();
         }
 
-        thisAreaShouldBeThriving.thisAreaUpdated.AddListener(CheckIfGoalIsMet);
-        thisAreaShouldBeClean.thisAreaUpdated.AddListener(CheckIfGoalIsMet);
-        thisAreaShouldBeDirty.thisAreaUpdated.AddListener(CheckIfGoalIsMet);
+        if (thisAreaShouldBeThriving != null)
+        {
+            thisAreaShouldBeThriving.thisAreaUpdated.AddListener(CheckIfGoalIsMet);
+        }
+        else
+        {
+            areaThriving = true;
+        }
+
+        if (thisAreaShouldBeClean != null)
+        {
+            thisAreaShouldBeClean.thisAreaUpdated.AddListener(CheckIfGoalIsMet);
+        }
+        else
+        {
+            areaClean = true;
+        }
+
+        if (thisAreaShouldBeDirty != null)
+        {
+            thisAreaShouldBeDirty.thisAreaUpdated.AddListener(CheckIfGoalIsMet);
+        }
+        else
+        {
+            areaDirty = true;
+        }
     }
 
     // Update is called once per frame

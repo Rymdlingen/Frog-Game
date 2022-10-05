@@ -21,9 +21,16 @@ public class TutorialUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.T))
         {
-            counter = startTimer;
+            if (counter > 0)
+            {
+                counter = 0;
+            }
+            else
+            {
+                counter = startTimer;
+            }
         }
 
         if (pauseCounter)
