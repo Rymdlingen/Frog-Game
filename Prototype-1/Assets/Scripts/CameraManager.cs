@@ -38,12 +38,12 @@ public class CameraManager : MonoBehaviour
     {
         if (currentGameMode == GameModes.Explore)
         {
-            exploreCamera.Priority = mapCamera.Priority + 1;
+            exploreCamera.Priority = 1;
             mapCamera.Priority = 0;
         }
         else if (currentGameMode == GameModes.Map)
         {
-            mapCamera.Priority = exploreCamera.Priority + 1;
+            mapCamera.Priority = 1;
             exploreCamera.Priority = 0;
         }
     }

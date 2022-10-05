@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 497584740641525187}
   - component: {fileID: 497584740640395011}
   - component: {fileID: -5806235402513607653}
+  - component: {fileID: -4882117504869513696}
   m_Layer: 0
   m_Name: Battery
-  m_TagString: Untagged
+  m_TagString: Thing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +98,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thingSO: {fileID: 11400000, guid: 52a8fc8aaab867448a74925d28947b79, type: 2}
+--- !u!64 &-4882117504869513696
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497584740642329027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: eef823a0d743d8942b54d878cc992b37, type: 3}
