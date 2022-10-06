@@ -32,6 +32,8 @@ public class AreaScriptableObject : ScriptableObject
     public int[] nrOfThingsRequiredThrive;
     private List<int> savedValuesThrive = new List<int>();
 
+    [field: SerializeField]
+    public bool areaIncluded { get; private set; }
 
     private void OnValidate()
     {

@@ -35,3 +35,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 47ee5b8953d06274fa7d974e0530625b, type: 2}
   - {fileID: 11400000, guid: fe060db2947b9f343916b8467cc5407c, type: 2}
   nrOfThingsRequiredThrive: 01000000010000000200000001000000
+  <areaIncluded>k__BackingField: 1

@@ -15,6 +15,7 @@ public class DisplayAreaInfo : MonoBehaviour
     [SerializeField] Inventory inventory;
     [SerializeField] MapManager mapManagerScript;
     [SerializeField] Camera mapCamera;
+    [SerializeField] GameObject lockImage;
 
     [SerializeField]
     private GameManager gameManager;
@@ -54,7 +55,17 @@ public class DisplayAreaInfo : MonoBehaviour
             return;
         }
 
+
         AreaScriptableObject areaInfo = areaScript.AreaInfo;
+
+        if (!areaInfo.areaIncluded)
+        {
+            lockImage.SetActive(true);
+        }
+        else
+        {
+            lockImage.SetActive(false);
+        }
 
         // Check the state of the area.
         AreaState currentAreaState = areaScript.areaState;
