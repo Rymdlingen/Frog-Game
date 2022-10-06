@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Mug
   model: {fileID: 1311806438667044223, guid: a0b6468443ea5ac4ba6b80d4209a60ba, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: c4e3f8d42a04d4a4a82bd227f8bafba7, type: 3}

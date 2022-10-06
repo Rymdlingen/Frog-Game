@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Can green
   model: {fileID: 2622084170891898209, guid: 67f00cdffde3542448c515e83f182e92, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 97e75d9f214424947abbc27b848b77d7, type: 3}

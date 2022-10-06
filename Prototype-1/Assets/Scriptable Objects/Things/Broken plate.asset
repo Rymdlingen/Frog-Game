@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Broken plate
   model: {fileID: 8168391000792208412, guid: 3e195bea201131a40b50ee4fac61991d, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 3a21cfd1a72bb45f9b8a559f4574c743, type: 3}

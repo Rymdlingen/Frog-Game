@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
         }
 
         endGameManager.allGoalsMetEvent.AddListener(EndGame);
+
+        CursorHiddenAndLocked();
     }
 
     // Update is called once per frame

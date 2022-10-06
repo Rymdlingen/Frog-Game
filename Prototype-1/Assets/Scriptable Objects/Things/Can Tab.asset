@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Can tab
   model: {fileID: 6367502460400249664, guid: d003b25deebd0ec4d92a4ef51395e732, type: 3}
-  <Icon>k__BackingField: {fileID: 21300000, guid: e8ec8d2d6966a41f8b696f20d31f2963, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 0bbe926b646894ec9a6621c1132674fc, type: 3}

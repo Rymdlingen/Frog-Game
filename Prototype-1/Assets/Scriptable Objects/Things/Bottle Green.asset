@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Bottle green
   model: {fileID: 6516327851799966271, guid: 61d8c958cb600774a989a3951606567c, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 12cd6758bbfad4a4fb10d1af0fe24fda, type: 3}

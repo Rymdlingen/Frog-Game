@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Can orange
   model: {fileID: 2076629482137642618, guid: 5e47854dc3c2fa047a626f1ce1560e82, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 6f94bde96cdcc4ce88f1649c210596e4, type: 3}

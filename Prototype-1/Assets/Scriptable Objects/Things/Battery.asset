@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Battery
   model: {fileID: 497584740642329027, guid: b371686da1eaf654d979b83e06f6c2b7, type: 3}
-  <Icon>k__BackingField: {fileID: 21300000, guid: 5147e7a4cd3a04cd2ad225ffdf400801, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: f0f6521cee8e74df1b79c3e7d84f7f52, type: 3}

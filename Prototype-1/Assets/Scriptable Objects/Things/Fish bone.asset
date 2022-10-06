@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Fish bone
   model: {fileID: 1132153443507859333, guid: 9499c70019e36bf4bab271233804b6e5, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 1b4e87fcc66324109a41a76a11cb9692, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Crushed can Orange
   model: {fileID: 6982570986786818951, guid: 8e09686712b39a44888a9a9a4486b8fc, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: b2716b438bf6d485497256c1bcc4a95f, type: 3}

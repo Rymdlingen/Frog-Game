@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Can crushed blue
   model: {fileID: 1319724119547983369, guid: 8eaece9b3587f774caf2c54164334181, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 20e5c4a0234de4a86bc91bd61543f1a0, type: 3}

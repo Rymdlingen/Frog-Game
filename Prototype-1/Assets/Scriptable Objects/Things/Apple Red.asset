@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Apple red
   model: {fileID: 4359620396639252001, guid: 69423f56dc816674d9a124c808a86fbd, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: f88f581ae5c2443a29fa8b7c48640be1, type: 3}

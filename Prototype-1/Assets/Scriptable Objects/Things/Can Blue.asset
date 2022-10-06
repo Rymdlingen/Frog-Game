@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Can Blue
   model: {fileID: 8937316409581436132, guid: ecb483528c5868a47a898a8defd3515b, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 812a14029fc6e4d49bdd1ddf37d7c8bd, type: 3}

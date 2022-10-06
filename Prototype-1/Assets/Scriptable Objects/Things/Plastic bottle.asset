@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Plastic bottle
   model: {fileID: 4010556684416853170, guid: d256998f0f9777141a446e8facfdcf7c, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: d2b2307a2819c4676af672a33f01c334, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Broken mug
   model: {fileID: 3694158958650102481, guid: 4587f9d4c8e069645ad43b1f91e59eb3, type: 3}
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 8ea98c1ca613046c5a625533448345fd, type: 3}
