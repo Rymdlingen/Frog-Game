@@ -16,10 +16,11 @@ MonoBehaviour:
   Description: Rough lake with a lot of rocks and shallow water.
   <StartingSate>k__BackingField: 0
   thingsRequiredForUnlock:
-  - {fileID: 11400000, guid: 4671a03f97005d14f8beac60b29baddb, type: 2}
-  - {fileID: 11400000, guid: 481a586e7b7098a45a83facf4a3b22f0, type: 2}
-  - {fileID: 11400000, guid: 6413cd1296c0d9647baa55def89fea49, type: 2}
-  nrOfThingsRequiredUnlock: 020000000400000001000000
+  - {fileID: 11400000, guid: df99d9dbbf1e4ec4886cd76f1101fed3, type: 2}
+  - {fileID: 11400000, guid: 194baa562f97eb04495da27046aa2374, type: 2}
+  - {fileID: 11400000, guid: eb244cebf9e2170478429cd296b3cab9, type: 2}
+  - {fileID: 11400000, guid: b87788e267e328146ba729f443e403f9, type: 2}
+  nrOfThingsRequiredUnlock: 02000000010000000100000001000000
   thingsRequiredForClean:
   - {fileID: 11400000, guid: 4dd296d94eb8b35408892dc3434767be, type: 2}
   - {fileID: 11400000, guid: 03d4d5f29b1da0446a3927f52fac811c, type: 2}
@@ -32,3 +33,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2d6c9dae3a520424c8c48d6878c00f78, type: 2}
   - {fileID: 11400000, guid: 8e6892417df59e647b62b2e299274d96, type: 2}
   nrOfThingsRequiredThrive: 020000000100000003000000010000000a00000063000000
+  <areaIncluded>k__BackingField: 0

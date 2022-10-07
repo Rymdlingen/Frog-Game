@@ -16,11 +16,17 @@ MonoBehaviour:
   Description: Dark, deep and old forest and a swamp.
   <StartingSate>k__BackingField: 0
   thingsRequiredForUnlock:
-  - {fileID: 11400000, guid: eb244cebf9e2170478429cd296b3cab9, type: 2}
-  nrOfThingsRequiredUnlock: 01000000
+  - {fileID: 11400000, guid: 0063b32e36ede144e8bbd323db8045b9, type: 2}
+  - {fileID: 11400000, guid: 0c77a447e91a5fa429d8cc2246cfd88b, type: 2}
+  - {fileID: 11400000, guid: 4d0fd56409e1081408d251a53f2ccab1, type: 2}
+  - {fileID: 11400000, guid: 433558b6d0a125743bb0ebf319c2181a, type: 2}
+  - {fileID: 11400000, guid: 5b6410dbc0c7a8c4b9257e887e4ac502, type: 2}
+  - {fileID: 11400000, guid: 7684848354a0eee4c95e3cb22532aa5f, type: 2}
+  nrOfThingsRequiredUnlock: 010000000500000007000000040000000900000006000000
   thingsRequiredForClean:
   - {fileID: 11400000, guid: 756aa850980a71a438fcf771c3def9cb, type: 2}
   nrOfThingsRequiredClean: 01000000
   thingsRequiredForThrive:
   - {fileID: 11400000, guid: 4a1885526a9c2494da79480cf6824219, type: 2}
   nrOfThingsRequiredThrive: 01000000
+  <areaIncluded>k__BackingField: 0

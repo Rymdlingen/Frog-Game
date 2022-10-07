@@ -17,11 +17,15 @@ MonoBehaviour:
     deep water.
   <StartingSate>k__BackingField: 0
   thingsRequiredForUnlock:
-  - {fileID: 11400000, guid: 4a1885526a9c2494da79480cf6824219, type: 2}
-  nrOfThingsRequiredUnlock: 01000000
+  - {fileID: 11400000, guid: fe060db2947b9f343916b8467cc5407c, type: 2}
+  - {fileID: 11400000, guid: 6bd0a4c46849fb1499503424b1df44ad, type: 2}
+  - {fileID: 11400000, guid: 350e7583c7505d94d9a7c218cb65b22d, type: 2}
+  - {fileID: 11400000, guid: 47ee5b8953d06274fa7d974e0530625b, type: 2}
+  nrOfThingsRequiredUnlock: 02000000010000000300000004000000
   thingsRequiredForClean:
   - {fileID: 11400000, guid: 252dd378037f7c7419a29019486a0075, type: 2}
   nrOfThingsRequiredClean: 01000000
   thingsRequiredForThrive:
   - {fileID: 11400000, guid: 756aa850980a71a438fcf771c3def9cb, type: 2}
   nrOfThingsRequiredThrive: 01000000
+  <areaIncluded>k__BackingField: 0
