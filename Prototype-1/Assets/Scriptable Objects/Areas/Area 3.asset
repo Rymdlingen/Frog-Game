@@ -17,22 +17,19 @@ MonoBehaviour:
     places.
   <StartingSate>k__BackingField: 0
   thingsRequiredForUnlock:
-  - {fileID: 11400000, guid: 0c77a447e91a5fa429d8cc2246cfd88b, type: 2}
-  - {fileID: 11400000, guid: 0063b32e36ede144e8bbd323db8045b9, type: 2}
   - {fileID: 11400000, guid: 5b6410dbc0c7a8c4b9257e887e4ac502, type: 2}
-  - {fileID: 11400000, guid: 433558b6d0a125743bb0ebf319c2181a, type: 2}
-  - {fileID: 11400000, guid: 4d0fd56409e1081408d251a53f2ccab1, type: 2}
   - {fileID: 11400000, guid: 943e2d58217ff7c4a9fdc9eabccd944c, type: 2}
-  nrOfThingsRequiredUnlock: 010000000100000002000000010000000300000001000000
-  thingsRequiredForClean:
-  - {fileID: 11400000, guid: 252dd378037f7c7419a29019486a0075, type: 2}
   - {fileID: 11400000, guid: c61ea6e9a3552194ca0fed78bb2f93b0, type: 2}
   - {fileID: 11400000, guid: 0d0dd9b352345fc4292c30ab0f147686, type: 2}
-  nrOfThingsRequiredClean: 050000000200000001000000
+  - {fileID: 11400000, guid: 252dd378037f7c7419a29019486a0075, type: 2}
+  nrOfThingsRequiredUnlock: 0100000002000000010000000300000001000000
+  thingsRequiredForClean:
+  - {fileID: 11400000, guid: 252dd378037f7c7419a29019486a0075, type: 2}
+  - {fileID: 11400000, guid: 0c77a447e91a5fa429d8cc2246cfd88b, type: 2}
+  - {fileID: 11400000, guid: 194baa562f97eb04495da27046aa2374, type: 2}
+  nrOfThingsRequiredClean: 080000000100000001000000
   thingsRequiredForThrive:
   - {fileID: 11400000, guid: 52a8fc8aaab867448a74925d28947b79, type: 2}
-  - {fileID: 11400000, guid: df99d9dbbf1e4ec4886cd76f1101fed3, type: 2}
-  - {fileID: 11400000, guid: 47ee5b8953d06274fa7d974e0530625b, type: 2}
-  - {fileID: 11400000, guid: fe060db2947b9f343916b8467cc5407c, type: 2}
-  nrOfThingsRequiredThrive: 01000000010000000200000001000000
+  - {fileID: 11400000, guid: a3cd10929b0b327488c9b877fa3d1c56, type: 2}
+  nrOfThingsRequiredThrive: 0500000001000000
   <areaIncluded>k__BackingField: 1

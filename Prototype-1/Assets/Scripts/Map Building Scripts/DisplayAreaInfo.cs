@@ -141,13 +141,22 @@ public class DisplayAreaInfo : MonoBehaviour
         nameText.SetText(areaInfo.Name);
 
         // Set status for button.
-        if (nrOfRequirementsMet == nrOfThingsNeeded)
+        if (lockImage.activeSelf)
         {
-            unlockButton.interactable = true;
+            unlockButton.gameObject.SetActive(false);
         }
         else
         {
-            unlockButton.interactable = false;
+            unlockButton.gameObject.SetActive(true);
+
+            if (nrOfRequirementsMet == nrOfThingsNeeded)
+            {
+                unlockButton.interactable = true;
+            }
+            else
+            {
+                unlockButton.interactable = false;
+            }
         }
     }
 
